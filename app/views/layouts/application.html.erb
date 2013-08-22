@@ -42,10 +42,9 @@
   <div class='container'>
     <div class='row'>
       <h1>AccessLint</h1>
-      <p>Check a website for accessibility errors.</p>
+      <h2>Check for accessibility errors on a webpage.</h2>
       <%= form_tag '/', method: 'get' do %>
         <fieldset>
-          <legend>Audit a page</legend>
           <%= label_tag 'url', 'URL' %>
           <%= url_field_tag :url, @url, placeholder: 'http://www.example.com' %>
           <%= button_tag "Run" %>
