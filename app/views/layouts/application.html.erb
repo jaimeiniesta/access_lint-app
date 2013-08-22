@@ -43,14 +43,14 @@
     <div class='row'>
       <h1>AccessLint</h1>
       <h2>Check for accessibility errors on a webpage.</h2>
-      <%= form_tag '/', method: 'get' do %>
+      <form action='/' method='get'>
         <fieldset>
           <%= label_tag 'url', 'URL' %>
           <%= url_field_tag :url, @url, placeholder: 'http://www.example.com' %>
           <button type='submit'>Run</button>
         </fieldset>
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check for accessibility errors on a webpage with AccessLint" data-size="large" data-dnt="true">Tweet</a>
-      <% end %>
+      </form>
 
       <%= yield %>
       <p>Created by <%= link_to "Cameron Cundiff", "http://pivotallabs.com/author/ccundiff/" %> using the <%= link_to "AccessLint Rubygem", "http://rubygems.org/gems/access_lint" %>, that includes Google's <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %> audit rules.</p>
