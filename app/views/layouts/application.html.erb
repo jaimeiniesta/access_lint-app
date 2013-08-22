@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AccessLintHosted</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>AccessLint</h1>
+<p>AccessLint runs an accessibility audit on a webpage url.</p>
+<%= form_tag '/audit', method: 'post' do %>
+  <fieldset>
+    <legend>Audit a page</legend>
+    <%= label_tag 'url', 'URL' %>
+    <%= url_field_tag :url, nil, placeholder: 'http://www.example.com' %>
+    <%= button_tag "Run" %>
+  </fieldset>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
