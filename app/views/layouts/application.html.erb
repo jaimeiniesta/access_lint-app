@@ -46,8 +46,12 @@
       <p>Web accessibility means making content accessible to everyone, regardless of ability. As developers, we should strive to build accessibly, and automated tools can help.</p>
       <form action='/' method='get'>
         <fieldset>
-          <%= label_tag 'url', 'URL' %>
-          <%= url_field_tag :url, @url, placeholder: 'http://www.example.com' %>
+          <%= label_tag :url %>
+          <%= url_field_tag :url, @url, placeholder: 'http://www.example.com', required: true %>
+          <%= label_tag :rules %>
+          <%= select_tag :rules,
+            options_for_select(['Google Accessibility Developer Tools', ['HTML CodeSniffer', disabled: true ]])
+          %>
           <button type='submit'>Run</button>
         </fieldset>
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check for accessibility errors on a webpage with AccessLint" data-size="large" data-dnt="true">Tweet</a>
