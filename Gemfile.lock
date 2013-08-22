@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/milgner/compass-rails.git
+  revision: 1749c06f15dc4b058427e7969810457213647fb8
+  ref: 1749c06f15dc4b058427e7969810457213647fb8
+  specs:
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -36,6 +44,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chunky_png (1.2.8)
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -44,9 +53,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (2.0.0)
+    fssm (0.2.10)
+    groundworkcss (0.4.3)
+      compass-rails (~> 1)
+      jquery-rails (~> 3)
+      railties (>= 3.1.0, < 5.0)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.0)
@@ -56,6 +74,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -91,6 +110,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.5)
     rspec-core (2.14.5)
     rspec-expectations (2.14.2)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -121,6 +141,9 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.8)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.18.1)
     thread_safe (0.1.2)
       atomic
@@ -144,6 +167,8 @@ DEPENDENCIES
   access_lint
   capybara
   coffee-rails (~> 4.0.0)
+  compass-rails!
+  groundworkcss
   jbuilder (~> 1.2)
   jquery-rails
   pg
@@ -153,5 +178,6 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
+  therubyracer
   turbolinks
   uglifier (>= 1.3.0)

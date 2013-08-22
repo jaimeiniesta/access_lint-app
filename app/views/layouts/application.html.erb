@@ -5,21 +5,56 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <%= stylesheet_link_tag("application", :media => "screen") %>
+  <!--[if IE]>
+  <link type="text/css" rel="stylesheet" href="/assets/groundworkcss/groundwork-ie.css">
+  <![endif]-->
+  <!--[if IE 7]>
+  <link type="text/css" rel="stylesheet" href="/assets/groundworkcss/font-awesome-ie7.min.css">
+  <![endif]-->
+  <%= javascript_include_tag("application") %>
+  <script type="text/javascript">
+    // SVG support?
+    Modernizr.load({
+      test: Modernizr.inlinesvg,
+      yep: [
+        "/assets/groundworkcss/social-icons-svg.css"
+      ],
+      nope: [
+        "/assets/groundworkcss/social-icons-png.css",
+        "/assets/sidereel-ie/svg-to-png.js"
+      ]
+    });
+    // HTML5 placeholder support?
+    Modernizr.load({
+      test: Modernizr.input.placeholder,
+      nope: [
+        '/assets/groundworkcss/placeholder_polyfill.css',
+        '/assets/groundworkcss/libs/placeholder_polyfill.jquery.js'
+      ]
+    });
+  </script>
 </head>
 <body>
 
-<h1>AccessLint</h1>
-<p>AccessLint runs an accessibility audit on a webpage url.</p>
-<%= form_tag '/', method: 'get' do %>
-  <fieldset>
-    <legend>Audit a page</legend>
-    <%= label_tag 'url', 'URL' %>
-    <%= url_field_tag :url, @url, placeholder: 'http://www.example.com' %>
-    <%= button_tag "Run" %>
-  </fieldset>
-<% end %>
+  <div class='container'>
+    <div class='row'>
+      <h1>AccessLint</h1>
+      <p>Check a url for accessibility errors.</p>
+      <%= form_tag '/', method: 'get' do %>
+        <fieldset>
+          <legend>Audit a page</legend>
+          <%= label_tag 'url', 'URL' %>
+          <%= url_field_tag :url, @url, placeholder: 'http://www.example.com' %>
+          <%= button_tag "Run" %>
+        </fieldset>
+      <% end %>
 
-<%= yield %>
-
+      <%= yield %>
+      <p>Written by <%= link_to "Cameron Cundiff", "http://pivotallabs.com/author/ccundiff/" %>, using rules from <%= link_to "Google's Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %> project.</p>
+    </div>
+  </div>
 </body>
 </html>

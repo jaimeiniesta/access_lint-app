@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require groundworkcss/libs/modernizr-2.6.2.min
+//= require groundworkcss
 //= require turbolinks
 //= require_tree .
