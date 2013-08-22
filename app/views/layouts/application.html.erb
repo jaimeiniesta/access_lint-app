@@ -49,11 +49,13 @@
           <%= url_field_tag :url, @url, placeholder: 'http://www.example.com' %>
           <%= button_tag "Run" %>
         </fieldset>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check for accessibility errors on a webpage with AccessLint" data-size="large" data-hashtags="accessibility" data-dnt="true">Tweet</a>
       <% end %>
 
       <%= yield %>
       <p>Created by <%= link_to "Cameron Cundiff", "http://pivotallabs.com/author/ccundiff/" %> using the <%= link_to "AccessLint Rubygem", "http://rubygems.org/gems/access_lint" %>, that includes Google's <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %> audit rules.</p>
     </div>
   </div>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>
