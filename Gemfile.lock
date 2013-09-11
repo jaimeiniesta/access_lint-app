@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/ckundo/access_lint.git
+  revision: b346680fd24ddbf916d86e6c656377be3f1a1246
+  specs:
+    access_lint (0.0.7)
+      thor
+
+GIT
   remote: git://github.com/milgner/compass-rails.git
   revision: 1749c06f15dc4b058427e7969810457213647fb8
   ref: 1749c06f15dc4b058427e7969810457213647fb8
@@ -9,8 +16,6 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    access_lint (0.0.4)
-      thor
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
       mail (~> 2.5.3)
@@ -36,7 +41,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.0)
-    atomic (1.1.13)
+    atomic (1.1.14)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -59,7 +64,7 @@ GEM
       sass (~> 3.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
-    execjs (2.0.0)
+    execjs (2.0.1)
     fssm (0.2.10)
     groundworkcss (0.4.3)
       compass-rails (~> 1)
@@ -67,7 +72,7 @@ GEM
       railties (>= 3.1.0, < 5.0)
     hike (1.2.3)
     i18n (0.6.5)
-    jbuilder (1.5.0)
+    jbuilder (1.5.1)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     jquery-rails (3.0.4)
@@ -79,10 +84,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.2)
-    mime-types (1.24)
+    mime-types (1.25)
     mini_portile (0.5.1)
     minitest (4.7.5)
-    multi_json (1.7.9)
+    multi_json (1.8.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     pg (0.16.0)
@@ -145,7 +150,7 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
-    thread_safe (0.1.2)
+    thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
     treetop (1.4.15)
@@ -154,7 +159,7 @@ GEM
     turbolinks (1.3.0)
       coffee-rails
     tzinfo (0.3.37)
-    uglifier (2.1.2)
+    uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     xpath (2.0.0)
@@ -164,7 +169,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  access_lint
+  access_lint!
   capybara
   coffee-rails (~> 4.0.0)
   compass-rails!
