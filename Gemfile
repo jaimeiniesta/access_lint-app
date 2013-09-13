@@ -30,8 +30,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-#gem 'access_lint', github: 'ckundo/access_lint'
-gem 'access_lint', path: '/Users/ckundo/workspace/access_lint'
+gem 'access_lint', github: 'ckundo/access_lint'
 gem 'compass-rails', github: 'milgner/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
 
 group :development, :assets do
