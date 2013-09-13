@@ -1,17 +1,16 @@
 GIT
-  remote: git://github.com/ckundo/access_lint.git
-  revision: b346680fd24ddbf916d86e6c656377be3f1a1246
-  specs:
-    access_lint (0.0.7)
-      thor
-
-GIT
   remote: git://github.com/milgner/compass-rails.git
   revision: 1749c06f15dc4b058427e7969810457213647fb8
   ref: 1749c06f15dc4b058427e7969810457213647fb8
   specs:
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+
+PATH
+  remote: /Users/ckundo/workspace/access_lint
+  specs:
+    access_lint (0.0.7)
+      thor
 
 GEM
   remote: https://rubygems.org/
