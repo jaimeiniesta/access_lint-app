@@ -31,11 +31,9 @@ group :doc do
 end
 
 gem 'access_lint', github: 'ckundo/access_lint'
-gem 'compass-rails', github: 'milgner/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
-
-group :development, :assets do
-  gem 'groundworkcss'
-end
+gem 'autoprefixer-rails'
+gem 'compass-rails', github: 'groundworkcss/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
+gem 'groundworkcss'
 
 group :test do
   gem 'capybara'
