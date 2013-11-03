@@ -38,7 +38,16 @@
   </script>
 </head>
 <body>
-  <a href="https://github.com/ckundo/access-lint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+  <header class='padded'>
+    <div class='container'>
+      <div class='row padded'>
+        <div class='five centered eighths'>
+          <h1 class="museo-slab">AccessLint</h1>
+          <p class='large'>Check for accessibility errors on a webpage.</p>
+        </div>
+      </div>
+    </div>
+  </header>
   <div class='container'>
     <div class='row padded'>
       <div class='five centered eighths'>
@@ -52,8 +61,11 @@
       </div>
     </div>
 
-      <%= yield %>
-      <p>Created by <%= link_to "Cameron Cundiff", "http://pivotallabs.com/author/ccundiff/" %> using the <%= link_to "AccessLint Rubygem", "http://rubygems.org/gems/access_lint" %>, that includes Google's <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %> audit rules.</p>
+    <div class='row padded'>
+      <div class='five centered eighths'>
+        <%= yield %>
+        <p class='pull-right'>Powered by <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %>.</p>
+      </div>
     </div>
   </div>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
