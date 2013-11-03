@@ -5,7 +5,6 @@ describe 'Auditing a page' do
     let(:report) { 'dummy report' }
     before do
       audit = double(:audit)
-      audit.stub(:run).with('html_codesniffer').and_return(report)
       audit.stub(:run).with('google_accessibility_developer_tools').and_return(report)
       AccessLint::Audit.stub(:new).and_return(audit)
     end
@@ -14,10 +13,6 @@ describe 'Auditing a page' do
       visit '/'
       page.should have_content 'AccessLint'
       fill_in 'Url', with: 'http://example.com'
-      click_on 'Run'
-      page.should have_content 'dummy report'
-
-      select 'HTML CodeSniffer', from: 'Rules'
       click_on 'Run'
       page.should have_content 'dummy report'
     end

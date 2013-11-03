@@ -40,24 +40,17 @@
 <body>
   <a href="https://github.com/ckundo/access-lint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
   <div class='container'>
-    <div class='row'>
-      <h1>AccessLint</h1>
-      <h2>Check for accessibility errors on a webpage.</h2>
-      <p>Web accessibility means making content accessible to everyone, regardless of ability. As developers, we should strive to build accessibly, and automated tools can help.</p>
-      <%- rule_sets = [['Google Accessibility Developer Tools', 'google_accessibility_developer_tools'], ['HTML CodeSniffer', 'html_codesniffer']] %>
-      <form action='/' method='get'>
-        <fieldset>
-          <%= label_tag :url %>
-          <%= url_field_tag :url, @url, placeholder: 'http://www.example.com', required: true %>
-          
-          <%= label_tag :rules %>
-          <%= select_tag :rules,
-            options_for_select(rule_sets)
-          %>
-          <button type='submit'>Run</button>
-        </fieldset>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check for accessibility errors on a webpage with AccessLint" data-size="large" data-dnt="true">Tweet</a>
-      </form>
+    <div class='row padded'>
+      <div class='five centered eighths'>
+        <form action='/' method='get'>
+          <fieldset>
+            <%= label_tag :url %>
+            <%= url_field_tag :url, @url, placeholder: 'http://www.example.com', required: true, class: 'four fifths large' %>
+            <button type='submit' class='large gap-left'>Run</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
 
       <%= yield %>
       <p>Created by <%= link_to "Cameron Cundiff", "http://pivotallabs.com/author/ccundiff/" %> using the <%= link_to "AccessLint Rubygem", "http://rubygems.org/gems/access_lint" %>, that includes Google's <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %> audit rules.</p>
