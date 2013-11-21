@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'jbuilder', '~> 1.2'
-gem 'access_lint', github: 'ckundo/access_lint'
+gem 'access_lint', github: 'ckundo/access_lint', ref: 'v0.0.7'
 gem 'autoprefixer-rails'
 gem 'compass-rails', github: 'groundworkcss/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
 gem 'groundworkcss'

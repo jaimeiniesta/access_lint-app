@@ -5,7 +5,7 @@ describe 'Auditing a page' do
     let(:report) { 'dummy report' }
     before do
       audit = double(:audit)
-      audit.stub(:run).with('google_accessibility_developer_tools').and_return(report)
+      audit.stub(:run).with('html_code_sniffer').and_return(report)
       AccessLint::Audit.stub(:new).and_return(audit)
     end
 

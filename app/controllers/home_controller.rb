@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   def show
     if params[:url]
       @url = URI::unescape(params[:url])
-      rules = 'google_accessibility_developer_tools'
+      rules = 'html_code_sniffer'
 
       if @url.match(URI.regexp)
         @results ||= AccessLint::Audit.new(@url).run(rules)
