@@ -1,3 +1,7 @@
 <p class='large'>
-<%= simple_format(@results) %>
+<ul>
+<% @results.each do |result| %>
+  <li><%=result%></li>
+<% end %>
+</ul>
 </p>

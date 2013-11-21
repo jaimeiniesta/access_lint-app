@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Auditing a page' do
   context 'stubbing the request' do
-    let(:report) { 'dummy report' }
+    let(:report) { "ERROR|dummy report\nWARNING|irrelevant" }
     before do
       audit = double(:audit)
       audit.stub(:run).with('html_code_sniffer').and_return(report)
