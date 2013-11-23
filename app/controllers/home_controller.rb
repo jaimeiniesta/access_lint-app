@@ -1,5 +1,7 @@
 require 'uri'
 class HomeController < ApplicationController
+  rescue_from Timeout::Error, :with => :handle_timeout
+
   def show
     @results = []
     if params[:url]
@@ -13,7 +15,11 @@ class HomeController < ApplicationController
         flash[:notice] = "Audit complete."
       end
     end
-  rescue Timeout::Error => e
+  end
+
+  private
+
+  def handle_timeout
     flash[:error] = e.message
     @results = []
   end
