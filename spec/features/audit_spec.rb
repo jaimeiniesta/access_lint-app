@@ -2,10 +2,31 @@ require 'spec_helper'
 
 describe 'Auditing a page' do
   context 'stubbing the request' do
-    let(:report) { "ERROR|dummy report\nWARNING|irrelevant" }
+    let(:report) {
+      [
+        {
+          "element_names"=>[],
+          "severity"=>"Warning",
+          "status"=>"NA",
+          "title"=>"A not applicable condition"
+        },
+        {
+          "element_names"=>[],
+          "severity"=>"Warning",
+          "status"=>"FAIL",
+          "title"=>"A failure condition"
+        },
+        {
+          "element_names"=>[],
+          "severity"=>"Warning",
+          "status"=>"PASS",
+          "title"=>"A passing condition"
+        }
+      ]
+    }
     before do
       audit = double(:audit)
-      audit.stub(:run).with('html_code_sniffer').and_return(report)
+      audit.stub(:run).and_return(report)
       AccessLint::Audit.stub(:new).and_return(audit)
     end
 
@@ -14,7 +35,9 @@ describe 'Auditing a page' do
       page.should have_content 'AccessLint'
       fill_in 'Url', with: 'http://example.com'
       click_on 'Run'
-      page.should have_content 'dummy report'
+      page.should have_content 'A passing condition'
+      page.should have_content 'A failure condition'
+      page.should have_content 'A not applicable condition'
     end
   end
 

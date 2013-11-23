@@ -1,8 +1,5 @@
-<h2>
-  <%= @results['FAIL'].count %> errors,
-  <%= @results['PASS'].count %> successes,
-  <%= @results['NA'].count %> not applicable.
-</h2>
+<%= render 'shared/messages' %>
+<% if @results.any? %>
 <ul class='unstyled'>
   <% @results['FAIL'].each do |result| %>
     <li>
@@ -34,3 +31,4 @@
     </li>
   <% end %>
 </ul>
+<% end %>
