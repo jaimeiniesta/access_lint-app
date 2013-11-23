@@ -1,6 +1,7 @@
 <%= render 'shared/messages' %>
 <% if @results.any? %>
 <ul class='unstyled'>
+  <%- if @results['FAIL'] %>
   <% @results['FAIL'].each do |result| %>
     <li>
       <p class='error message'>
@@ -14,7 +15,9 @@
       </ul>
     </li>
   <% end %>
+  <% end %>
 
+  <%- if @results['PASS'] %>
   <% @results['PASS'].each do |result| %>
     <li>
       <p class='success message'>
@@ -22,13 +25,16 @@
       </p>
     </li>
   <% end %>
+  <% end %>
 
+  <%- if @results['NA'] %>
   <% @results['NA'].each do |result| %>
     <li>
       <p class='info message'>
         Not applicable: <%= result['title'] %><br />
       </p>
     </li>
+  <% end %>
   <% end %>
 </ul>
 <% end %>
