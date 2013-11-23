@@ -160,7 +160,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  access_lint (~> 0.0.8)
+  access_lint
   autoprefixer-rails
   capybara
   coffee-rails (~> 4.0.0)
