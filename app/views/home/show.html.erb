@@ -1,4 +1,4 @@
-<h2><%= @results.count %> errors</h2>
+<% if @results.any? %><h2><%= @results.count %> errors</h2><% end %>
 <ul>
 <% @results.each do |result| %>
   <li>
