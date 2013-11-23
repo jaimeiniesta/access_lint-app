@@ -1,7 +1,12 @@
-<p class='large'>
+<h2><%= @results.count %> errors</h2>
 <ul>
 <% @results.each do |result| %>
-  <li><%=result%></li>
+  <li>
+    <p class='error message'>
+      <% result.each do |message| %>
+        <%= message %><br />
+      <% end %>
+    </p>
+  </li>
 <% end %>
 </ul>
-</p>
