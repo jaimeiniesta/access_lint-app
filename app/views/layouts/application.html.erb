@@ -38,19 +38,13 @@
   </script>
 </head>
 <body>
-  <header class='padded'>
-    <div class='container'>
-      <div class='row padded'>
-        <div class='five centered eighths'>
-          <h1 class="museo-slab">AccessLint</h1>
-          <p class='large'>Check for accessibility errors on a webpage.</p>
-        </div>
-      </div>
-    </div>
-  </header>
   <div class='container'>
+    <header class='padded'>
+      <h1 class="museo-slab">AccessLint</h1>
+      <p class='large'>Check for accessibility errors on a webpage.</p>
+    </header>
     <div class='row padded'>
-      <div class='five centered eighths'>
+      <div class='two centered thirds'>
         <form action='/' method='get'>
           <fieldset>
             <%= label_tag :url %>
@@ -60,14 +54,17 @@
         </form>
       </div>
     </div>
-
     <div class='row padded'>
-      <div class='five centered eighths'>
+      <div class='two centered thirds'>
         <%= yield %>
+      </div>
+    </div>
+    <footer class='row padded'>
+      <div class='five centered eighths'>
         <p class='pull-left'>Powered by <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %>. Get the <%= link_to 'Chrome extension', 'https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en' %>.</p>
         <p class='pull-right'>Built by <%= link_to "ckundo", "http://twitter.com/ckundo" %>.
       </div>
-    </div>
+    </footer>
   </div>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script>

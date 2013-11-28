@@ -1,40 +1,33 @@
 <%= render 'shared/messages' %>
 <% if @results.any? %>
-<ul class='unstyled'>
-  <%- if @results['FAIL'] %>
-  <% @results['FAIL'].each do |result| %>
-    <li>
-      <p class='error message'>
-      Failure: <%= result['title'] %><br />
-      Severity: <%= result['severity'] %><br />
-      </p>
-      <ul>
-        <% result['element_names'].each do |name| %>
-          <li><%= name %></li>
-        <% end %>
-      </ul>
-    </li>
-  <% end %>
+  <% if @results['PASS'] %>
+    <h2>Passing</h2>
+    <% @results['PASS'].each do |result| %>
+      <h3 class='success box'><i class='icon-heart'></i> <%= result['title'] %></h3>
+    <% end %>
+    </ul>
   <% end %>
 
-  <%- if @results['PASS'] %>
-  <% @results['PASS'].each do |result| %>
-    <li>
-      <p class='success message'>
-        Passing: <%= result['title'] %><br />
-      </p>
-    </li>
-  <% end %>
+  <% if @results['FAIL'] %>
+    <h2>Failing</h2>
+    <% @results['FAIL'].each do |result| %>
+      <div class="row double-gap-bottom">
+        <h3 class='error box'><i class='icon-frown'></i> <%= result['title'] %>:</h3>
+        <ul class='unstyled'>
+          <% result['element_names'].each do |name| %>
+            <li class='gap-bottom'><pre data-lang='html'><%= name %></pre></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
   <% end %>
 
-  <%- if @results['NA'] %>
-  <% @results['NA'].each do |result| %>
-    <li>
-      <p class='info message'>
-        Not applicable: <%= result['title'] %><br />
-      </p>
-    </li>
+  <% if @results['NA'] %>
+    <h2>Not applicable</h2>
+    <% @results['NA'].each do |result| %>
+      <h3 class='info box'><%= result['title'] %></h3>
+    <% end %>
   <% end %>
-  <% end %>
+</div>
 </ul>
 <% end %>
