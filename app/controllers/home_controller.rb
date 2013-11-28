@@ -1,4 +1,3 @@
-require 'uri'
 class HomeController < ApplicationController
   rescue_from Timeout::Error, :with => :handle_timeout
 
