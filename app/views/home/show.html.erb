@@ -1,32 +1,39 @@
 <%= render 'shared/messages' %>
 <% if @results.any? %>
   <% if @results['PASS'] %>
+    <div class='row triple-gap-bottom'>
     <h2>Passing</h2>
     <% @results['PASS'].each do |result| %>
       <h3 class='success box'><i class='icon-heart'></i> <%= result['title'] %></h3>
     <% end %>
-    </ul>
+    </div>
   <% end %>
 
   <% if @results['FAIL'] %>
+    <hr />
+    <div class='row triple-gap-bottom'>
     <h2>Failing</h2>
     <% @results['FAIL'].each do |result| %>
-      <div class="row double-gap-bottom">
+      <div class="row triple-gap-bottom">
         <h3 class='error box'><i class='icon-frown'></i> <%= result['title'] %>:</h3>
-        <ul class='unstyled'>
+        <ol>
           <% result['element_names'].each do |name| %>
             <li class='gap-bottom'><pre data-lang='html'><%= name %></pre></li>
           <% end %>
-        </ul>
+        </ol>
       </div>
     <% end %>
+    </div>
   <% end %>
 
   <% if @results['NA'] %>
+    <div class='row triple-gap-bottom'>
+    <hr />
     <h2>Not applicable</h2>
     <% @results['NA'].each do |result| %>
-      <h3 class='info box'><%= result['title'] %></h3>
+      <h3 class='info message'><%= result['title'] %></h3>
     <% end %>
+  </div>
   <% end %>
 </div>
 </ul>
