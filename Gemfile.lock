@@ -60,6 +60,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    dalli (2.6.4)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -83,6 +84,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     method_source (0.8.2)
     mime-types (1.25)
     mini_portile (0.5.2)
@@ -166,9 +168,11 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   compass-rails!
+  dalli
   groundworkcss
   jbuilder (~> 1.2)
   jquery-rails
+  memcachier
   newrelic_rpm
   pg
   pry

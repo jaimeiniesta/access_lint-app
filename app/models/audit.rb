@@ -7,7 +7,8 @@ class Audit
   end
 
   def execute
-    raw_results = AccessLint::Audit.new(@url).run
+    raw_results = Rails.cache.read(@url) || AccessLint::Audit.new(@url).run
+    Rails.cache.write(@url, raw_results, ttl: 1.day)
     @results = raw_results.group_by { |result| result['status'] }
   end
 end
