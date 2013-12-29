@@ -6,7 +6,7 @@ class HomeController < ApplicationController
       @url = URI.parse(params[:url])
       @results = Audit.new(@url).execute
     end
-  rescue Exception => e
+  rescue Audit::ParserError => e
     flash[:error] = e.message
   end
 end
