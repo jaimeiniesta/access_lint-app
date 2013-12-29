@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/ckundo/access_lint.git
+  revision: 4a21f9c6fba948c2859eb50e4a4b1b6341682910
+  specs:
+    access_lint (0.0.9)
+      thor
+
+GIT
   remote: git://github.com/groundworkcss/compass-rails.git
   revision: 1749c06f15dc4b058427e7969810457213647fb8
   ref: 1749c06f15dc4b058427e7969810457213647fb8
@@ -9,8 +16,6 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    access_lint (0.0.9)
-      thor
     actionmailer (4.0.1)
       actionpack (= 4.0.1)
       mail (~> 2.5.4)
@@ -169,7 +174,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  access_lint
+  access_lint!
   autoprefixer-rails
   capybara
   coffee-rails (~> 4.0.0)

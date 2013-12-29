@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.1'
 
-gem 'access_lint'
+gem 'access_lint', github: 'ckundo/access_lint'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'honeybadger'
