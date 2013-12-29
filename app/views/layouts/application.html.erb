@@ -16,17 +16,6 @@
   <![endif]-->
   <%= javascript_include_tag("application") %>
   <script type="text/javascript">
-    // SVG support?
-    Modernizr.load({
-      test: Modernizr.inlinesvg,
-      yep: [
-        "/assets/groundworkcss/social-icons-svg.css"
-      ],
-      nope: [
-        "/assets/groundworkcss/social-icons-png.css",
-        "/assets/sidereel-ie/svg-to-png.js"
-      ]
-    });
     // HTML5 placeholder support?
     Modernizr.load({
       test: Modernizr.input.placeholder,
