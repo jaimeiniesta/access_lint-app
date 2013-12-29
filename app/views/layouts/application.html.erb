@@ -28,12 +28,11 @@
 </head>
 <body>
   <div class='container'>
-    <header class='padded'>
-      <h1 class="museo-slab"><%= link_to 'AccessLint', root_path %></h1>
-      <p class='large'>Check for accessibility errors on a webpage.</p>
-    </header>
     <div class='row padded'>
-      <div class='two centered thirds'>
+      <header class='padded'>
+        <h1 class="museo-slab"><big><%= link_to 'AccessLint', root_path %></big> <em>accessibility testing</em></h1>
+      </header>
+      <div class='one centered half'>
         <form action='/' method='get'>
           <fieldset class='padded one centered whole'>
               <label for='url' class='large hide-accessibly'><em>Url to test</em></label>
@@ -55,8 +54,8 @@
     </div>
     <footer class='row padded'>
       <div class='five centered eighths'>
-        <p class='pull-left'>Powered by <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %>. Get the <%= link_to 'Chrome extension', 'https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en' %>.</p>
-        <p class='pull-right'>Created and maintained by <%= link_to "Cameron Cundiff", "http://twitter.com/ckundo" %>.
+        <p class='pull-left'>Created by <%= link_to "Cameron Cundiff", "http://twitter.com/ckundo" %> using <%= link_to "Accessibility Developer Tools", "https://github.com/GoogleChrome/accessibility-developer-tools" %>.</p>
+        <p class='pull-right'>Get the <%= link_to 'Chrome extension', 'https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en', class: 'noicon' %>.</p>
       </div>
     </footer>
   </div>
