@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.1'
+gem 'unicorn'
 
 gem 'access_lint', github: 'ckundo/access_lint'
 gem 'autoprefixer-rails'
