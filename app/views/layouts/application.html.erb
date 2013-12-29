@@ -35,10 +35,15 @@
     <div class='row padded'>
       <div class='two centered thirds'>
         <form action='/' method='get'>
-          <fieldset>
-            <%= label_tag :url %>
-            <%= url_field_tag :url, @url, placeholder: 'http://www.example.com', required: true, class: 'four fifths large' %>
-            <button type='submit' class='large gap-left'>Run</button>
+          <fieldset class='padded one centered whole'>
+              <label for='url' class='large hide-accessibly'><em>Url to test</em></label>
+              <%= url_field_tag :url, @url, placeholder: 'http://www.example.com', 
+                required: true, class: 'five eighths large' %>
+              <button type='submit' class='large gap-left asphalt'>Run Audit</button>
+              <p class='large pull-left'>Try auditing <%= link_to "Twitter", root_path(url: "http://www.twitter.com"), class: 'noicon' %>,
+                <%= link_to "Google", root_path(url: "http://www.google.com"), class: 'noicon' %>, or
+                <%= link_to "Github", root_path(url: "http://www.github.com"), class: 'noicon' %>.
+              </p>
           </fieldset>
         </form>
       </div>
