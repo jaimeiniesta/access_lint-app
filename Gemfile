@@ -8,7 +8,11 @@ gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'honeybadger'
 gem 'compass-rails', :github => 'groundworkcss/compass-rails', :ref => '1749c06f15dc4b058427e7969810457213647fb8'
+
+gem 'rack-cache'
+gem 'kgio'
 gem 'dalli'
+
 gem 'groundworkcss'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
