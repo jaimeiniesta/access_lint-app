@@ -15,7 +15,7 @@ class Audit
   private
 
   def read_cache
-    Rails.cache.read(@url) || false
+    Rails.cache.read(@url.to_s) || false
   end
 
   def run_audit
@@ -33,6 +33,6 @@ class Audit
   end
 
   def cache_results(results)
-    Rails.cache.write(@url, results, expires_in: 5.hours)
+    Rails.cache.write(@url.to_s, results, expires_in: 5.hours)
   end
 end
