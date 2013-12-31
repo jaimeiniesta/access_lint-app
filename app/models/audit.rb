@@ -6,8 +6,12 @@ class Audit
   end
 
   def execute
-    raw_results = read_cache || run_audit
-    parse_results(raw_results)
+    if results = read_cache
+      return results
+    else
+      raw_results = run_audit
+      parse_results(raw_results)
+    end
   rescue JSON::ParserError
     raise ParserError, 'Audit failed to run because the request took too long to return.'
   end
@@ -19,9 +23,7 @@ class Audit
   end
 
   def run_audit
-    results = AccessLint::Audit.new(@url).run
-    cache_results(results)
-    results
+    AccessLint::Audit.new(@url).run
   end
 
   def parse_results(raw_results)
@@ -29,7 +31,10 @@ class Audit
       result.delete('elements')
     end
 
-    raw_results.group_by { |result| result['status'] }
+    results = raw_results.group_by { |result| result['status'] }
+    cache_results(results)
+
+    results
   end
 
   def cache_results(results)
