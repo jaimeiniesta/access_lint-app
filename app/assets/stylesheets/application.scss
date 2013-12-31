@@ -12,6 +12,15 @@
  *= require jquery.snippet
  *= require_tree .
  */
+
+@font-face {
+  font-family: 'museo-slab';
+  src: url('museo-slab-500-webfont.woff');
+  src: url('museo-slab-500-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import 'groundwork_settings';
 @import 'groundworkcss/groundwork';
 
