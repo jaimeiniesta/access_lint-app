@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/ckundo/access_lint.git
   revision: eaf7f90abed3ab96d65c5c1530e82f6f454595a4
+  ref: eaf7f90abed3ab96d65c5c1530e82f6f454595a4
   specs:
     access_lint (0.0.9)
       thor
