@@ -1,9 +1,10 @@
 GIT
   remote: git://github.com/ckundo/access_lint.git
-  revision: eaf7f90abed3ab96d65c5c1530e82f6f454595a4
-  ref: eaf7f90abed3ab96d65c5c1530e82f6f454595a4
+  revision: 3cc2b1a2859a4255b4595f541b0ade057b0073f8
   specs:
-    access_lint (0.0.9)
+    access_lint (0.1.1)
+      awesome_print
+      command_line_reporter
       thor
 
 GIT
@@ -45,6 +46,7 @@ GEM
     atomic (1.1.14)
     autoprefixer-rails (0.8.20131029)
       execjs
+    awesome_print (1.2.0)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -61,7 +63,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    colored (1.2)
     colorize (0.6.0)
+    command_line_reporter (3.3.1)
+      colored (>= 1.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)

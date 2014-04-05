@@ -31,10 +31,8 @@ class Audit
       result.delete('elements')
     end
 
-    results = raw_results.group_by { |result| result['status'] }
-    cache_results(results)
-
-    results
+    cache_results(raw_results)
+    raw_results
   end
 
   def cache_results(results)
