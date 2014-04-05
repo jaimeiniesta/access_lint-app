@@ -7,6 +7,7 @@ class HomeController < ApplicationController
       @results = Audit.new(@url).execute
     end
   rescue Audit::ParserError => e
+    notify_honeybadger(e)
     flash[:error] = e.message
   end
 end
