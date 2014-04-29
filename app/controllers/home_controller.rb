@@ -1,13 +1,20 @@
 class HomeController < ApplicationController
+  before_filter :load_url
+
   def show
     @results = []
-
-    if params[:url]
-      @url = URI.parse(params[:url])
-      @results = Audit.new(@url).execute
-    end
-  rescue Audit::ParserError => e
+    @results = Audit.new(@url).execute if params[:url]
+  rescue Exception => e
     notify_honeybadger(e)
-    flash[:error] = e.message
+    flash.now[:error] = "The url #{@url} didn't load properly."
+  end
+
+  private
+
+  def load_url
+    @url = URI.parse(params[:url])
+    @url = URI::HTTP.build(host: @url.path) unless @url.kind_of? URI::HTTP
+  rescue
+    flash.now[:error] = "The url #{@url} didn't load properly."
   end
 end

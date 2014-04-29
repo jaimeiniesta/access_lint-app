@@ -34,7 +34,7 @@
         <h1 class="museo-slab"><big><%= link_to 'AccessLint', root_path %></big> <em>accessibility testing</em></h1>
       </header>
       <div class='one centered half'>
-        <form action='/' method='get'>
+        <form action='/' method='get' novalidate>
           <fieldset class='padded one centered whole'>
               <label for='url' class='large hide-accessibly'><em>Url to test</em></label>
               <%= url_field_tag :url, @url, placeholder: 'http://www.example.com',
