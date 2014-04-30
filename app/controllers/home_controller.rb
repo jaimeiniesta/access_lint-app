@@ -12,8 +12,10 @@ class HomeController < ApplicationController
   private
 
   def load_url
-    @url = URI.parse(params[:url])
-    @url = URI::HTTP.build(host: @url.path) unless @url.kind_of? URI::HTTP
+    if params[:url]
+      @url = URI.parse(params[:url])
+      @url = URI::HTTP.build(host: @url.path) unless @url.kind_of? URI::HTTP
+    end
   rescue
     flash.now[:error] = "The url #{@url} didn't load properly."
   end
