@@ -3,6 +3,11 @@
 @import "neat";
 @import "base/base";
 
+.container {
+  @include outer-container;
+  @include padding(null ($base-spacing));
+}
+
 .hide-accessibly {
   border: 0;
   clip: rect(0 0 0 0);

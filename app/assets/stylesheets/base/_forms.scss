@@ -1,5 +1,5 @@
 fieldset {
-  background: lighten($base-border-color, 10);
+  background: tint($base-border-color, 75%);
   border: $base-border;
   margin: 0 0 ($base-spacing / 2) 0;
   padding: $base-spacing;

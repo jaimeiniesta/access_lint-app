@@ -6,6 +6,14 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+
+  @media screen and (min-width: 40em) {
+    font-size: $base-font-size * 1.0625;
+  }
+
+  @media screen and (min-width: 60em) {
+    font-size: $base-font-size * 1.1875;
+  }
 }
 
 h1,
@@ -27,20 +35,11 @@ h2 {
   font-size: $h2-font-size;
 }
 
-h3 {
-  font-size: $h3-font-size;
-}
-
-h4 {
-  font-size: $h4-font-size;
-}
-
-h5 {
-  font-size: $h5-font-size;
-}
-
+h3,
+h4,
+h5,
 h6 {
-  font-size: $h6-font-size;
+  font-size: $h3-font-size;
 }
 
 p {
@@ -52,13 +51,10 @@ a {
   color: $base-link-color;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     color: $hover-link-color;
-  }
-
-  &:active, &:focus {
-    color: $hover-link-color;
-    outline: none;
   }
 }
 
@@ -74,20 +70,4 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
-}
-
-blockquote {
-  border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15);
-  margin: $base-spacing 0;
-  padding-left: $base-spacing / 2;
-}
-
-cite {
-  color: lighten($base-font-color, 25);
-  font-style: italic;
-
-  &:before {
-    content: "\2014 \00A0";
-  }
 }
