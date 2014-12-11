@@ -8,12 +8,23 @@ GIT
       thor
 
 GIT
-  remote: git://github.com/groundworkcss/compass-rails.git
-  revision: 1749c06f15dc4b058427e7969810457213647fb8
-  ref: 1749c06f15dc4b058427e7969810457213647fb8
+  remote: git://github.com/rails/sass-rails.git
+  revision: a3a6183fda5a823cdc1afc7994efbb90aa58e1f6
   specs:
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
+    sass-rails (5.0.0.beta1)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (~> 1.1)
+
+GIT
+  remote: git://github.com/thoughtbot/bourbon.git
+  revision: f942322e3bc9576293addf81be7cee55354c082b
+  specs:
+    bourbon (4.0.2)
+      sass (~> 3.3)
+      thor
 
 GEM
   remote: https://rubygems.org/
@@ -54,7 +65,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    chunky_png (1.2.9)
     coderay (1.0.9)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -64,27 +74,14 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     colored (1.2)
-    colorize (0.6.0)
     command_line_reporter (3.3.2)
       colored (>= 1.2)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
     dalli (2.6.4)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
-    fssm (0.2.10)
-    groundworkcss (2.3.5)
-      autoprefixer-rails
-      coffee-rails (>= 3.2.1)
-      colorize
-      compass-rails (~> 1)
-      jquery-rails
-      sass-rails (>= 3.2.3)
     hike (1.2.3)
     honeybadger (1.9.4)
       faraday (~> 0.7)
@@ -108,6 +105,9 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     multipart-post (1.2.0)
+    neat (1.7.0)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     newrelic_rpm (3.6.9.171)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -153,11 +153,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    sass (3.2.12)
-    sass-rails (4.0.1)
-      railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0)
+    sass (3.4.9)
     slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -195,16 +191,16 @@ PLATFORMS
 DEPENDENCIES
   access_lint!
   autoprefixer-rails
+  bourbon!
   capybara
   coffee-rails (~> 4.0.0)
-  compass-rails!
   dalli
-  groundworkcss
   honeybadger
   jbuilder (~> 1.2)
   jquery-rails
   kgio
   memcachier
+  neat (~> 1.7.0)
   newrelic_rpm
   pg
   pry
@@ -212,7 +208,7 @@ DEPENDENCIES
   rails (= 4.0.1)
   rails_12factor
   rspec-rails
-  sass-rails (~> 4.0.0)
+  sass-rails!
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
