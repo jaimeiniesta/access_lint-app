@@ -1,0 +1,31 @@
+.results-title {
+  font-size: modular-scale(16px, 2, 1.333);
+  margin: $base-spacing 0 ($base-spacing / 2);
+}
+
+.results-passing {
+  .results-title {
+    color: green;
+  }
+}
+
+.results-failing {
+  .results-title {
+    color: red;
+  }
+}
+
+.results-na {
+  .results-title {
+    color: blue;
+  }
+}
+
+.result-item {
+  margin-bottom: $base-spacing / 2;
+}
+
+.result-item-title {
+  font-size: modular-scale(16px, 0, 1.333);
+  margin-top: $base-spacing;
+}

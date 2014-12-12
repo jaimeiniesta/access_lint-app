@@ -3,18 +3,12 @@
 @import "neat";
 @import "base/base";
 
+@import "prism";
+
+@import "home";
+@import "show";
+
 .container {
   @include outer-container;
   @include padding(null ($base-spacing));
-}
-
-.hide-accessibly {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }

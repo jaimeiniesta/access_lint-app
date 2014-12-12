@@ -9,9 +9,9 @@ $header-font-family: $base-font-family;
 
 // Font Sizes
 $base-font-size: 1em;
-$h1-font-size: modular-scale(3);
-$h2-font-size: modular-scale(2);
-$h3-font-size: modular-scale(1);
+$h1-font-size: modular-scale(16px, 3, 1.333);
+$h2-font-size: modular-scale(16px, 2, 1.333);
+$h3-font-size: modular-scale(16px, 1, 1.333);
 
 // Line height
 $base-line-height: 1.5;

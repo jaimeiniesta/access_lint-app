@@ -5,7 +5,7 @@ gem 'unicorn'
 
 gem 'access_lint', github: 'ckundo/access_lint'
 gem 'autoprefixer-rails'
-gem 'bourbon', github: 'thoughtbot/bourbon'
+gem 'bourbon', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'honeybadger'
 gem 'neat', '~> 1.7.0'
