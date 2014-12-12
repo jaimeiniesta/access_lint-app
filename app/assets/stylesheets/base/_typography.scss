@@ -5,6 +5,7 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: 600;
   line-height: $base-line-height;
 
   @media screen and (min-width: 40em) {
@@ -25,6 +26,7 @@ h6 {
   font-family: $header-font-family;
   line-height: $header-line-height;
   margin: 0;
+  font-weight: 700;
 }
 
 h1 {
@@ -44,6 +46,7 @@ h6 {
 
 p {
   margin: 0 0 ($base-spacing / 2);
+  font-weight: 700;
 }
 
 a {
@@ -55,6 +58,7 @@ a {
   &:active,
   &:focus {
     color: $hover-link-color;
+    outline: thin dotted;
   }
 }
 

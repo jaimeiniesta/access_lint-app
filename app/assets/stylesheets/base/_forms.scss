@@ -1,8 +1,8 @@
 fieldset {
-  background: tint($base-border-color, 60%);
-  border: $base-border;
+  background: transparent;
+  border: none;
   margin: 0 0 ($base-spacing / 2) 0;
-  padding: $base-spacing;
+  padding: $base-spacing 0;
 }
 
 input,

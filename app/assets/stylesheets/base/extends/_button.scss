@@ -1,8 +1,9 @@
 %button {
   -webkit-font-smoothing: antialiased;
-  background-color: $base-button-color;
+  background: transparent;
   border-radius: $base-border-radius;
-  color: white;
+  border: 4px solid $base-button-color;
+  color: $base-button-color;
   display: inline-block;
   font-size: $base-font-size;
   font-weight: bold;
@@ -11,12 +12,20 @@
   text-decoration: none;
 
   &:hover {
-    background-color: $hover-button-color;
-    color: white;
+    background-color: $base-button-color;
+    color: $base-background-color;
   }
 
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $base-accent-color;
+    box-shadow: 0 0 0 0.25em $form-box-shadow-focus;
+    outline-color: $base-accent-color;
+    outline: thin dotted;
   }
 }
