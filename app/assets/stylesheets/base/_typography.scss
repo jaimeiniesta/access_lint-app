@@ -25,7 +25,6 @@ h5,
 h6 {
   font-family: $header-font-family;
   line-height: $header-line-height;
-  margin: 0;
   font-weight: 700;
 }
 
@@ -45,25 +44,23 @@ h6 {
 }
 
 p {
-  margin: 0 0 ($base-spacing / 2);
+  margin: 0 0 $base-spacing;
   font-weight: 700;
 }
 
 a {
   @include transition(color 0.1s linear);
   color: $base-link-color;
-  text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
     color: $hover-link-color;
-    outline: thin dotted;
   }
 }
 
 hr {
-  border-bottom: $base-border;
+  border-bottom: 3px solid $base-font-color;
   border-left: none;
   border-right: none;
   border-top: none;

@@ -1,8 +1,10 @@
+form {
+  margin: 0 0 ($base-spacing / 2);
+}
+
 fieldset {
   background: transparent;
   border: none;
-  margin: 0 0 ($base-spacing / 2) 0;
-  padding: $base-spacing 0;
 }
 
 input,
@@ -24,6 +26,10 @@ label {
   abbr {
     display: none;
   }
+}
+
+.help-text {
+  font-size: modular-scale(16px, 0, 1.333);
 }
 
 textarea,

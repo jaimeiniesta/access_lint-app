@@ -6,9 +6,12 @@
 @import "prism";
 
 @import "home";
+@import "app-header";
+@import "app-footer";
 @import "show";
 
 .container {
   @include outer-container;
-  padding: $base-spacing;
+  @include padding(null ($base-spacing));
+  position: relative;
 }

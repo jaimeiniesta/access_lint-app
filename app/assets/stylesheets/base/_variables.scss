@@ -33,7 +33,7 @@ $stone: #e8e1cc;
 $sand: #f9f5ea;
 
 // Background Color
-$base-background-color: $sand;
+$base-background-color: #fff;
 
 // Font Colors
 $base-font-color: $onyx;
@@ -46,8 +46,8 @@ $base-button-color: $base-font-color;
 $hover-button-color: $hover-link-color;
 
 // Border color
-$base-border-color: $stone;
-$base-border: 4px solid $base-border-color;
+$base-border-color: tint($medium-gray, 50%);
+$base-border: 1px solid $base-border-color;
 
 // Forms
 $form-border-color: $base-border-color;

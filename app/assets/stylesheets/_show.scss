@@ -5,19 +5,13 @@
 
 .results-passing {
   .results-title {
-    color: green;
+    color: shade(#76CD9C, 10%);
   }
 }
 
 .results-failing {
   .results-title {
-    color: red;
-  }
-}
-
-.results-na {
-  .results-title {
-    color: blue;
+    color: $fire;
   }
 }
 
