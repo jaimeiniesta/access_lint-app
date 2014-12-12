@@ -1,9 +1,9 @@
 <svg version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="193.1038px" height="91.9557px" viewBox="0 0 193.1038 91.9557"
-  alt="W3C" aria-labelledby="W3C">
-  <title>W3c®</title>
-  <desc>The World Wide Web Consortium (W3C) is an international community where Member organizations, a full-time staff, and the public work together to develop Web standards.</desc>
+  alt="W3C" aria-labelledby="title desc">
+  <title id="title">W3c®</title>
+  <desc id="desc">The World Wide Web Consortium (W3C) is an international community where Member organizations, a full-time staff, and the public work together to develop Web standards.</desc>
   <path d="M45.7206,0.5145l16.3696,55.6549L78.4598,0.5145h11.853h32.526v5.5314l-16.7078,28.7854
     c5.8696,1.8845,10.3095,5.3097,13.3197,10.2754c3.0101,4.9657,4.5166,10.7984,4.5166,17.4952c0,8.28-2.2,15.2411-6.603,20.8862
     c-4.4029,5.6451-10.1049,8.4648-17.1029,8.4648c-5.2699,0-9.8604-1.6742-13.7716-5.0226c-3.914-3.3484-6.8105-7.8821-8.6922-13.6039

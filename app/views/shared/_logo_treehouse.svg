@@ -1,9 +1,9 @@
 <svg version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="171.0444px" height="148.4224px" viewBox="0 0 171.0444 148.4224"
-  alt="Treehouse" aria-labelledby="Treehouse">
-  <title>Treehouse™</title>
-  <desc>Treehouse is an online interactive education platform that offers courses in web, mobile and business development.
+  alt="Treehouse" aria-labelledby="title desc">
+  <title id="title">Treehouse™</title>
+  <desc id="desc">Treehouse is an online interactive education platform that offers courses in web, mobile and business development.
 </desc>
   <path d="M6.3022,148.4224C1.961,148.4224,0,145.4468,0,141.5259V127.697c0-1.3655,1.0153-2.4505,2.346-2.4505
     c1.2951,0,2.3458,1.085,2.3458,2.4505v2.3804h4.3763c1.1548,0,2.1703,0.8758,2.1703,2.1004c0,1.1557-1.0156,2.0314-2.1703,2.0314

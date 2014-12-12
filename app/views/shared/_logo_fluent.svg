@@ -1,9 +1,9 @@
 <svg version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="283.001px" height="76px" viewBox="0 0 283.001 76"
-  alt="Fluent" aria-labelledby="Fluent">
-  <title>Fluent</title>
-  <desc>Fluent is an international confrence spotlights the emerging methods, tools, and technologies of the Web Platform for developers, software engineers, UX/UI designers, and other web professionals.</desc>
+  alt="Fluent" aria-labelledby="title desc">
+  <title id="title">Fluent</title>
+  <desc id="desc">Fluent is an international confrence spotlights the emerging methods, tools, and technologies of the Web Platform for developers, software engineers, UX/UI designers, and other web professionals.</desc>
   <path d="M53.513,0c1.557,0,2.115,0.668,2.115,2.233v17.521c0,1.674-0.778,2.565-2.115,2.565
     c-1.334,0-2.113-0.892-2.113-2.565V5.581c0-1.34-0.556-1.898-1.892-1.898H17.689c-1.336,0-1.892,0.559-1.892,1.898v28.346
     c0,1.341,0.556,1.898,1.892,1.898H34.71c1.336,0,1.892-0.558,1.892-1.898v-7.811c0-1.565,0.779-2.457,2.001-2.457
