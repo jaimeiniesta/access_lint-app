@@ -10,6 +10,8 @@ set -e
 gem list bundler --installed > /dev/null || gem install bundler
 bundle install
 
+brew install phantomjs
+
 # Set up database and add any development seed data
 bundle exec rake db:setup
 

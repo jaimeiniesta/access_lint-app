@@ -2,10 +2,6 @@
 
 * Ruby version
 
-* System dependencies
-
-    brew install phantomjs
-
 * Setup and Configuration
 
     ./bin/setup
