@@ -34,10 +34,7 @@
           <%= url_field_tag :url, @url, placeholder: 'http://www.example.com',
               required: true %>
           <button type="submit">Run Audit</button>
-          <p>Try auditing <%= link_to "Twitter", root_path(url: "http://www.twitter.com") %>,
-            <%= link_to "Google", root_path(url: "http://www.google.com") %>, or
-            <%= link_to "GitHub", root_path(url: "http://www.github.com") %>.
-          </p>
+          <p>Try auditing <%= link_to "W3C's example of an inaccessible site", root_path(url: "http://www.w3.org/WAI/demos/bad/before/home.html") %></p>
         </fieldset>
       </form>
       <div>
