@@ -8,21 +8,11 @@
   <title>AccessLint</title>
   <%= stylesheet_link_tag "application", media: "screen", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <script type="text/javascript">
-    // HTML5 placeholder support?
-    Modernizr.load({
-      test: Modernizr.input.placeholder,
-      nope: [
-        '/assets/groundworkcss/placeholder_polyfill.css',
-        '/assets/groundworkcss/libs/placeholder_polyfill.jquery.js'
-      ]
-    });
-  </script>
 </head>
 <body>
   <header class="app-header" role="banner">
     <div class="container">
-      <h1 class="app-title"><%= render "shared/logo_accesslint" %></h1>
+      <h1 class="app-logo"><%= render "shared/logo_accesslint" %></h1>
       <h2 class="app-tagline">Accessibility Testing</h2>
     </div>
   </header>
