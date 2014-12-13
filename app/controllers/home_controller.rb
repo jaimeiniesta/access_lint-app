@@ -2,10 +2,6 @@ class HomeController < ApplicationController
   before_filter :load_url
 
   def show
-    @experimental = [
-      "These elements are focusable but either invisible or obscured by another element",
-      "Text elements should have a reasonable contrast ratio"
-    ]
     @results = []
     @results = Audit.new(@url).execute if params[:url]
   rescue Exception => e

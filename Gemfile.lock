@@ -1,8 +1,9 @@
 GIT
-  remote: git://github.com/ckundo/access_lint.git
-  revision: 040caeb6156f82c2d1e12f8d61d3c7db21bee344
+  remote: git://github.com/accesslint/access_lint.git
+  revision: fb7be952a55e9ec0546907bcc796d9d13e8bd04f
+  ref: fb7be952a55e9ec0546907bcc796d9d13e8bd04f
   specs:
-    access_lint (0.1.1)
+    access_lint (0.1.3)
       awesome_print
       command_line_reporter
       thor

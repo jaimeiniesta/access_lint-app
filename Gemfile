@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 gem 'unicorn'
 
-gem 'access_lint', github: 'ckundo/access_lint'
+gem 'access_lint', github: 'accesslint/access_lint', ref: "fb7be952a55e9ec0546907bcc796d9d13e8bd04f"
 gem 'autoprefixer-rails'
 gem 'bourbon', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'

@@ -16,15 +16,13 @@
       <h2 class="results-title">&#9785; Failing</h2>
       <ol>
         <% @results['FAIL'].each do |result| %>
-          <% unless @experimental.include?(result['title']) %>
-            <li class="result-item">
-              <h3 class="result-item-title"><%= result['title'] %>:</h3>
+          <li class="result-item">
+            <h3 class="result-item-title"><%= result['title'] %>:</h3>
 
-              <% result['element_names'].each do |name| %>
-                <pre><code class="language-markup"><%= name %></code></pre>
-              <% end %>
-            </li>
-          <% end %>
+            <% result['element_names'].each do |name| %>
+              <pre><code class="language-markup"><%= name %></code></pre>
+            <% end %>
+          </li>
         <% end %>
       </ol>
     </section>
