@@ -194,6 +194,7 @@ DEPENDENCIES
   jquery-rails
   kgio
   memcachier
+  minitest
   neat (~> 1.7.0)
   newrelic_rpm
   pg
