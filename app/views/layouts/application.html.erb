@@ -22,12 +22,12 @@
       <p>
         AccessLint alerts you of common accessibility issues on a page. While no automated testing tool can give a complete picture of accessibility, AccessLint can catch some of the “low hanging fruit” of accessibility errors. That includes checking for alternative text on images, color contrast, and valid usage of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes.
       </p>
-      <form class="audit-form" action="/" method="get" novalidate>
+      <form class="audit-form" action="/results" method="get" novalidate>
         <fieldset>
           <label for="url">URL to Test</label>
           <%= url_field_tag :url, @url, placeholder: 'http://www.example.com',
               required: true %>
-          <p class="help-text">Try auditing <%= link_to "W3C's example of an inaccessible site", root_path(url: "http://www.w3.org/WAI/demos/bad/before/home.html") %></p>
+          <p class="help-text">Try auditing <%= link_to "W3C's example of an inaccessible site", results_path(url: "http://www.w3.org/WAI/demos/bad/before/home.html") %></p>
           <button type="submit">Run Audit</button>
         </fieldset>
       </form>
