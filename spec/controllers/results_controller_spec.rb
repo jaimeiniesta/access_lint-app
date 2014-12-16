@@ -17,7 +17,7 @@ describe ResultsController do
     end
 
     context "with an invalid url" do
-      it "responds with 402 and an error message" do
+      it "responds with 422 and an error message" do
         get :index, url: "google"
 
         expect(response.status).to eq 422
