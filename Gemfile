@@ -25,6 +25,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :test do
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'jasmine'
   gem 'rspec-rails'
 end

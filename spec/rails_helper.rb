@@ -7,3 +7,5 @@ require 'rspec/rails'
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 end
+
+Capybara.javascript_driver = :webkit
