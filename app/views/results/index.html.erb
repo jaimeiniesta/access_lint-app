@@ -1,5 +1,6 @@
 <%= render 'shared/messages' %>
 <% if @results.any? %>
+  <%= link_to "Send results to email", new_results_email_path %>
   <% if @results['PASS'] %>
     <section class="results-passing">
       <h2 class="results-title">&#9786; Passing</h2>

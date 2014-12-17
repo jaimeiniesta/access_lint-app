@@ -1,0 +1,5 @@
+<%= form_for :results_email, url: results_email_path do |form| %>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  <%= form.submit "Send" %>
+<% end %>
