@@ -5,10 +5,11 @@
 
 @import "prism";
 
-@import "home";
+@import "components/**/*";
+@import "audit";
 @import "app-header";
 @import "app-footer";
-@import "show";
+@import "results";
 
 .container {
   @include outer-container;

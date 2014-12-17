@@ -26,11 +26,13 @@ gem 'uglifier', '>= 1.3.0'
 group :test do
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'jasmine'
+  gem 'launchy'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
 end
 
 group :development, :test do
+  gem 'jasmine'
   gem 'pry'
   gem 'sqlite3'
 end

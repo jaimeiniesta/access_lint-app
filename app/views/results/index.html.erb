@@ -3,28 +3,36 @@
   <% if @results['PASS'] %>
     <section class="results-passing">
       <h2 class="results-title">&#9786; Passing</h2>
-      <ol>
+      <ul>
         <% @results['PASS'].each do |result| %>
           <li class="result-item"><h3 class="result-item-title"><%= result['title'] %></h3></li>
         <% end %>
-      </ol>
+      </ul>
     </section>
   <% end %>
 
   <% if @results['FAIL'] %>
     <section class="results-failing">
       <h2 class="results-title">&#9785; Failing</h2>
-      <ol>
-        <% @results['FAIL'].each do |result| %>
-          <li class="result-item">
-            <h3 class="result-item-title"><%= result['title'] %>:</h3>
-
-            <% result['element_names'].each do |name| %>
-              <pre><code class="language-markup"><%= name %></code></pre>
-            <% end %>
-          </li>
+      <div class="accordion" role="tablist">
+        <% @results['FAIL'].each_with_index do |result, index| %>
+          <% result_id = "result-#{index}" %>
+          <% result_button = "result-button-#{index}" %>
+          <div class="result-item">
+            <a href="javascript:void()" role="tab" aria-expanded="false" id="<%= result_button %>" class="result-item-title" aria-controls="<%= result_id %>">
+              <%= result['title'] %>
+              (<%= pluralize(result["element_names"].count, "result") %>)
+            </a>
+            <ul id="<%= result_id %>" class="submenu" role="tabpanel" aria-selected="false" aria-hidden="true" aria-labelledby="<%= result_button %>">
+              <% result['element_names'].each do |name| %>
+                <li>
+                  <pre><code class="language-markup"><%= name %></code></pre>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ol>
+      </div>
     </section>
   <% end %>
 <% end %>

@@ -1,0 +1,15 @@
+[role="tablist"] {
+
+  [role="tab"] {
+    display: block;
+  }
+
+  [role="tabpanel"] {
+    display: none;
+  }
+
+  [aria-expanded] {
+    display: block;
+    padding-bottom: 0;
+  }
+}
