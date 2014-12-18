@@ -1,1 +1,11 @@
-<%= render 'shared/messages' %>
+<p>
+  AccessLint alerts you of common accessibility issues on a page. While no automated testing tool can give a complete picture of accessibility, AccessLint can catch some of the “low hanging fruit” of accessibility errors. That includes checking for alternative text on images, color contrast, and valid usage of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes.
+</p>
+
+<%= render "shared/audit_form" %>
+
+<div>
+  <% if signed_out? %>
+    <%= link_to "Sign up for a free trial of AccessLint Pro", sign_up_path %>
+  <% end %>
+</div>

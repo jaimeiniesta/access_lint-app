@@ -11,43 +11,21 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </head>
 <body>
-  <% if signed_in? %>
-    Signed in As: <%= current_user.email %>
-    <%= button_to "Sign out", sign_out_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign in", sign_in_path %>
-  <% end %>
-
-  <div id="flash">
-    <% flash.each do |key, value| %>
-      <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
-  </div>
-
   <header class="app-header" role="banner">
     <div class="container">
+      <% if signed_out? %>
+        <%= link_to "Sign in", sign_in_path, class: "sign-in" %>
+      <% end %>
       <h1><%= render 'shared/logo_accesslint.svg' %></h1>
       <h2 class="app-tagline">Test Your Site’s Accessibility</h2>
     </div>
   </header>
   <main class="screen-main" role="main">
     <div class="container">
-      <p>
-        AccessLint alerts you of common accessibility issues on a page. While no automated testing tool can give a complete picture of accessibility, AccessLint can catch some of the “low hanging fruit” of accessibility errors. That includes checking for alternative text on images, color contrast, and valid usage of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes.
-      </p>
-      <form class="audit-form" action="/results" method="get" novalidate>
-        <fieldset>
-          <label for="url">URL to Test</label>
-          <%= url_field_tag :url, @url, placeholder: 'http://www.example.com',
-              required: true %>
-          <p class="help-text">Try auditing <%= link_to "W3C's example of an inaccessible site", results_path(url: "http://www.w3.org/WAI/demos/bad/before/home.html") %></p>
-          <button type="submit">Run Audit</button>
-        </fieldset>
-      </form>
-      <div>
-        <%= link_to "Sign up for a free trial of AccessLint Pro", sign_up_path %>
-        <%= yield %>
-      </div>
+      <% flash.each do |key, value| %>
+        <p class="flash <%= key %>"><%= value %></p>
+      <% end %>
+      <%= yield %>
     </div>
   </main>
   <%= render 'shared/footer' %>
