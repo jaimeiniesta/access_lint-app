@@ -85,6 +85,9 @@ GEM
       colored (>= 1.2)
     dalli (2.6.4)
     diff-lcs (1.2.5)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     email_validator (1.5.0)
       activemodel
     erubis (2.7.0)
@@ -225,6 +228,7 @@ DEPENDENCIES
   clearance
   coffee-rails (~> 4.0.0)
   dalli
+  dotenv-rails
   honeybadger
   jasmine
   jbuilder (~> 1.2)
