@@ -17,10 +17,9 @@ describe ResultsController do
     end
 
     context "with an invalid url" do
-      it "responds with 422 and an error message" do
+      it "renders an error message" do
         get :index, url: "google"
 
-        expect(response.status).to eq 422
         expect(request.flash.now[:error]).not_to be_blank
       end
     end
