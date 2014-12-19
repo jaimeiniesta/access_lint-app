@@ -6,13 +6,7 @@
 
 .app-header-gripdots,
 .app-header-main {
-
-  &:after {
-    border-bottom: $base-border;
-    content: "";
-    display: block;
-    margin-right: 1.25em;
-  }
+  @extend %baseline;
 }
 
 .app-header-gripdots {
