@@ -1,5 +1,4 @@
 .app-footer {
   @include padding(($base-spacing * 2) null ($base-spacing * 6));
   background-color: $wake;
-  margin-top: $base-spacing * 2;
 }
