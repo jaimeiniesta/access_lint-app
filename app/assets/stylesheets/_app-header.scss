@@ -1,13 +1,72 @@
 .app-header {
-  background-color: $wake;
-  margin-bottom: $base-spacing * 2;
-  padding-top: $base-spacing;
+  background-color: $sand;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+}
+
+.app-header-gripdots,
+.app-header-main {
+
+  &:after {
+    border-bottom: $base-border;
+    content: "";
+    display: block;
+    margin-right: 1.25em;
+  }
+}
+
+.app-header-gripdots {
+
+  &:before {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  .app-header-sign-in {
+    float: right;
+    line-height: 4;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .gripdots-svg {
+    display: block;
+    float: left;
+    margin: 1.125em;
+  }
+}
+
+.app-header-main {
+
+  .container {
+    padding-top: $base-spacing;
+    padding-bottom: $base-spacing;
+  }
+}
+
+.app-title {
+  float: right;
+  margin: 0;
+  max-width: 40%;
+}
+
+.app-tagline {
+  float: left;
+  max-width: 60%;
+
+  ol {
+    list-style-type: decimal;
+    margin-bottom: .5em;
+    margin-left: 1.5em;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: .5em;
+  }
 }
 
 .app-logo-svg {
-  float: left;
-  margin-bottom: $base-spacing;
-
   path,
   text,
   circle
@@ -27,13 +86,3 @@
   }
 }
 
-.app-tagline {
-  @include position(absolute, null 0 1em null);
-  font-size: modular-scale(16px, 2, 1.333);
-  text-align: right;
-}
-
-a.sign-in {
-  float: right;
-  text-decoration: none;
-}
