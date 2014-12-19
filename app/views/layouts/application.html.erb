@@ -20,15 +20,28 @@
 </head>
 <body>
   <header class="app-header" role="banner">
-    <div class="container">
-      <% if signed_out? %>
-        <%= link_to "Sign in", sign_in_path, class: "sign-in" %>
-      <% end %>
-      <h1><%= render 'shared/logo_accesslint.svg' %></h1>
-      <h2 class="app-tagline">Test Your Site’s Accessibility</h2>
+    <div class="app-header-gripdots">
+      <%= render 'shared/art_gripdots.svg' %>
+      <div class="container">
+        <% if signed_out? %>
+          <%= link_to "Sign in", sign_in_path, class: "app-header-sign-in" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="app-header-main">
+      <div class="container">
+        <h1 class="app-title"><%= render 'shared/logo_accesslint.svg' %></h1>
+        <h2 class="app-tagline">
+          <ol>
+            <li>Test your site’s accessability</li>
+            <li>Make the web a better place</li>
+            <li>Profit</li>
+          </ol>
+        </h2>
+      </div>
     </div>
   </header>
-  <main class="screen-main" role="main">
+  <main class="screen-main app-main" role="main">
     <div class="container">
       <% flash.each do |key, value| %>
         <p class="flash <%= key %>"><%= value %></p>
