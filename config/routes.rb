@@ -17,4 +17,7 @@ AccessLintHosted::Application.routes.draw do
   root "home#show"
 
   get "/results", to: "results#index", as: :results
+
+  get "/contact", to: "contact#index", as: :contact
+  post "/contact", to: "contact#create"
 end

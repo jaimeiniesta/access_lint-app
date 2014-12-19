@@ -27,6 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 group :test do
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'capybara-email'
   gem 'launchy'
   gem 'rspec-rails'
   gem 'selenium-webdriver'

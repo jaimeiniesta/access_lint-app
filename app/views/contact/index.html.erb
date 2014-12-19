@@ -1,0 +1,8 @@
+<%= form_tag contact_path do %>
+  <%= label_tag "email" %>
+  <%= email_field_tag "email", nil, required: true %>
+  <%= label_tag "message" %>
+  <%= text_area_tag "message", nil %>
+
+  <%= submit_tag "Send" %>
+<% end %>

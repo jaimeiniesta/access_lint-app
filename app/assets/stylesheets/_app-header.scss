@@ -33,7 +33,7 @@
   text-align: right;
 }
 
-a.sign-in {
+.menu {
   float: right;
-  text-decoration: none;
+  @include clearfix;
 }

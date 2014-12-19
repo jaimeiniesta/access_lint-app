@@ -21,9 +21,12 @@
 <body>
   <header class="app-header" role="banner">
     <div class="container">
-      <% if signed_out? %>
-        <%= link_to "Sign in", sign_in_path, class: "sign-in" %>
-      <% end %>
+      <div class="menu">
+        <%= link_to "Contact", contact_path %>
+        <% if signed_out? %>
+          <%= link_to "Sign in", sign_in_path %>
+        <% end %>
+      </div>
       <h1><%= render 'shared/logo_accesslint.svg' %></h1>
       <h2 class="app-tagline">Test Your Site’s Accessibility</h2>
     </div>
