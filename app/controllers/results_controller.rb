@@ -4,7 +4,8 @@ class ResultsController < ApplicationController
     url = URL.new(params[:url])
 
     if url.valid?
-      @results = Audit.new(url).execute
+      runner = Runner.new(url)
+      @report = ReportLoader.new(runner).report
     else
       flash.now[:error] = url.error
     end

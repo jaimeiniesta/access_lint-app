@@ -2,8 +2,8 @@ require "rails_helper"
 
 describe ResultsController do
   before do
-    audit = double(:audit, execute: [])
-    allow(Audit).to receive(:new).and_return(audit)
+    loader = double(:audit, report: Report.new([]))
+    allow(ReportLoader).to receive(:new).and_return(loader)
   end
 
   context "with a url param" do

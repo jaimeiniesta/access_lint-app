@@ -1,23 +1,33 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   sign_up_success: "You have successfully signed up for a trial of AccessLint Pro. Check back soon for more features!"
+  rules:
+    AX_ARIA_01:
+      title: Elements with ARIA roles must use a valid, non-abstract ARIA role
+    AX_ARIA_02:
+      title: aria-labelledby attributes should refer to an element which exists in the DOM
+    AX_ARIA_03:
+      title: Elements with ARIA roles must have all required attributes for that role
+    AX_ARIA_04:
+      title: ARIA state and property values must be valid
+    AX_ARIA_05:
+      title: role=main should only appear on significant elements
+    AX_TITLE_01:
+      title: The web page should have a title that describes topic or purpose
+    AX_HTML_01:
+      title: The web page should have the content's human language indicated in the markup
+    AX_TEXT_01:
+      title: Controls and media elements should have labels
+    AX_TEXT_02:
+      title: Images should have an alt attribute, unless they have an ARIA role of "presentation"
+    AX_TEXT_03:
+      title: Labels should only contain one control or link
+    AX_IMAGE_01:
+      title: Meaningful images should not be used in element backgrounds
+    AX_FOCUS_02:
+      title: Elements with onclick handlers must be focusable
+    AX_FOCUS_03:
+      title: Avoid positive integer values for tabIndex
+    AX_COLOR_01:
+      title: Text elements should have a reasonable contrast ratio
+    AX_VIDEO_01:
+      title: Video elements should use <track> elements to provide captions
