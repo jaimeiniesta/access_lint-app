@@ -20,3 +20,13 @@
   font-size: modular-scale(16px, 0, 1.333);
   margin-top: $base-spacing;
 }
+
+.result-container {
+  background-color: $stone;
+  padding: 1em;
+  margin-bottom: 2em;
+
+  .result-item-description {
+    margin-bottom: 5em;
+  }
+}

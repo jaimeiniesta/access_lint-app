@@ -20,17 +20,24 @@
           <% result_id = "result-#{index}" %>
           <% result_button = "result-button-#{index}" %>
           <div class="result-item">
-            <a href="javascript:void()" role="tab" aria-expanded="false" id="<%= result_button %>" class="result-item-title" aria-controls="<%= result_id %>">
-              <%= result['title'] %>
-              (<%= pluralize(result["element_names"].count, "result") %>)
-            </a>
-            <ul id="<%= result_id %>" class="submenu" role="tabpanel" aria-selected="false" aria-hidden="true" aria-labelledby="<%= result_button %>">
-              <% result['element_names'].each do |name| %>
-                <li>
-                  <pre><code class="language-markup"><%= name %></code></pre>
-                </li>
-              <% end %>
-            </ul>
+            <div class="result-container">
+              <a href="javascript:void()" role="tab" aria-expanded="false" id="<%= result_button %>" class="result-item-title" aria-controls="<%= result_id %>">
+                <%= result['title'] %>
+                (<%= pluralize(result["element_names"].count, "result") %>)
+              </a>
+            </div>
+            <div id="<%= result_id %>" role="tabpanel" aria-selected="false" aria-hidden="true" aria-labelledby="<%= result_button %>">
+              <p class="result-item-description">
+                <!-- put descriptiong here -->
+              </p>
+              <ul class="submenu">
+                <% result['element_names'].each do |name| %>
+                  <li>
+                    <pre><code class="language-markup"><%= name %></code></pre>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
           </div>
         <% end %>
       </div>
