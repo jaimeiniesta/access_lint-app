@@ -1,34 +1,38 @@
 <%= render "shared/audit_form" %>
 <% if @report.results.any? %>
   <section class="results-passing">
-    <h2 class="results-title">&#9786; Passing</h2>
-    <ul>
-      <% @report.passing.each do |result| %>
-        <li class="result-item"><h3 class="result-item-title"><%= result.title %></h3></li>
-      <% end %>
-    </ul>
+    <div class="container">
+      <h2 class="results-title">&#9786; Passing</h2>
+      <ul>
+        <% @report.passing.each do |result| %>
+          <li class="result-item"><h3 class="result-item-title"><%= result.title %></h3></li>
+        <% end %>
+      </ul>
+    </div>
   </section>
 
   <section class="results-failing">
-    <h2 class="results-title">&#9785; Failing</h2>
-    <div class="accordion" role="tablist">
-      <% @report.failing.each_with_index do |result, index| %>
-        <% result_id = "result-#{index}" %>
-        <% result_button = "result-button-#{index}" %>
-        <div class="result-item">
-          <a href="javascript:void()" role="tab" aria-expanded="false" id="<%= result_button %>" class="result-item-title" aria-controls="<%= result_id %>">
-            <%= result.title %>
-            (<%= pluralize(result.elements.count, "result") %>)
-          </a>
-          <ul id="<%= result_id %>" class="submenu" role="tabpanel" aria-selected="false" aria-hidden="true" aria-labelledby="<%= result_button %>">
-            <% result.element_names.each do |name| %>
-              <li>
-                <pre><code class="language-markup"><%= name %></code></pre>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+    <div class="container">
+      <h2 class="results-title">&#9785; Failing</h2>
+      <div class="accordion" role="tablist">
+        <% @report.failing.each_with_index do |result, index| %>
+          <% result_id = "result-#{index}" %>
+          <% result_button = "result-button-#{index}" %>
+          <div class="result-item">
+            <a href="javascript:void()" role="tab" aria-expanded="false" id="<%= result_button %>" class="result-item-title" aria-controls="<%= result_id %>">
+              <%= result.title %>
+              (<%= pluralize(result.elements.count, "result") %>)
+            </a>
+            <ul id="<%= result_id %>" class="submenu" role="tabpanel" aria-selected="false" aria-hidden="true" aria-labelledby="<%= result_button %>">
+              <% result.element_names.each do |name| %>
+                <li>
+                  <pre><code class="language-markup"><%= name %></code></pre>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     </div>
   </section>
 <% end %>

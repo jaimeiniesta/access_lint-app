@@ -1,9 +1,14 @@
-<form class="audit-form" action="/results" method="get" novalidate>
-  <fieldset>
-    <label for="url">URL to Test</label>
-    <%= url_field_tag :url, @url, placeholder: 'http://www.example.com',
-      required: true %>
-    <p class="help-text">Example: <%= link_to t(:example, scope: :links), results_path(url: "http://www.w3.org/WAI/demos/bad/before/home.html") %></p>
-    <button type="submit">Run Audit</button>
-  </fieldset>
-</form>
+<section class="main-audit" id="main-audit">
+  <div class="container">
+    <form class="audit-form" action="/results" method="get" novalidate>
+      <fieldset>
+        <label for="url">URL to Test</label>
+        <%= url_field_tag :url, @url, placeholder: 'http://www.example.com',
+          required: true %>
+        <p class="help-text">Example: <%= link_to t(:example, scope: :links), results_path(url: "http://www.w3.org/WAI/demos/bad/before/home.html") %></p>
+        <button type="submit">Run Audit</button>
+      </fieldset>
+    </form>
+  </div>
+</section>
+

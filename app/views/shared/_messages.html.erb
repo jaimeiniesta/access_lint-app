@@ -1,3 +1,7 @@
-<% if flash[:error] %>
-  <p class='large error message'><%= flash[:error] %></p>
-<% end %>
+<section class="main-messages">
+  <div class="container">
+    <% if flash[:error] %>
+      <p class='large error message'><%= flash[:error] %></p>
+    <% end %>
+  </div>
+</section>

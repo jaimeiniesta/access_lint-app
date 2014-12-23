@@ -37,17 +37,20 @@
             <li>Make the web a better place</li>
             <li>Profit</li>
           </ol>
+          <%= link_to "Use it now","#main-audit", class: "button" %>
         </h2>
       </div>
     </div>
   </header>
   <main class="screen-main app-main" role="main">
-    <div class="container">
-      <% flash.each do |key, value| %>
-        <p class="flash <%= key %>"><%= value %></p>
-      <% end %>
-      <%= yield %>
-    </div>
+    <section class="main-messages">
+      <div class="container">
+        <% flash.each do |key, value| %>
+          <p class="flash <%= key %>"><%= value %></p>
+        <% end %>
+      </div>
+    </section>
+    <%= yield %>
   </main>
   <%= render 'shared/footer' %>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

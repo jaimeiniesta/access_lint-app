@@ -1,11 +1,46 @@
-<p>
-  AccessLint alerts you of common accessibility issues on a page. While no automated testing tool can give a complete picture of accessibility, AccessLint can catch some of the “low hanging fruit” of accessibility errors. That includes checking for alternative text on images, color contrast, and valid usage of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes.
-</p>
+<section class="main-description">
+  <div class="container">
+    <%= render "shared/art_sun.svg" %>
+    <div class="description-content">
+      <p>
+        AccessLint alerts you of common accessibility issues on a page. While no automated testing tool can give a complete picture of accessibility, AccessLint can catch some of the “low hanging fruit” of accessibility errors. That includes checking for alternative text on images, color contrast, and valid usage of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes.
+      </p>
+      <%= link_to "Run Audit","#main-audit", class: "button" %>
+    </div>
+  </div>
+  <hr class="description-detail-rule">
+  <hr class="description-detail-rule">
+</section>
+
+<section class="main-featuredby">
+  <div class="container">
+    <h2 class="featuredby-title">Featured By…</h2>
+    <ul class="featuredby-list">
+      <li class="featuredby-list-item">
+        <%= link_to "", class: "featuredby-list" do %>
+          <%= render "shared/logo_w3c.svg" %>
+        <% end %>
+      </li>
+      <li class="featuredby-list-item">
+        <%= link_to "", class: "featuredby-list" do %>
+          <%= render "shared/logo_fluent.svg" %>
+        <% end %>
+      </li>
+      <li class="featuredby-list-item">
+        <%= link_to "", class: "featuredby-list" do %>
+          <%= render "shared/logo_treehouse.svg" %>
+        <% end %>
+      </li>
+      <li class="featuredby-list-item">
+        <%= link_to "", class: "featuredby-list" do %>
+          <%= render "shared/logo_ruby5.svg" %>
+        <% end %>
+      </li>
+    </ul>
+    <footer class="featuredby-footer">
+      and more…
+    </footer>
+  </div>
+</section>
 
 <%= render "shared/audit_form" %>
-
-<div>
-  <% if signed_out? %>
-    <%= link_to "Sign up for a free trial of AccessLint Pro", sign_up_path %>
-  <% end %>
-</div>
