@@ -1,7 +1,7 @@
 <section class="main-audit" id="main-audit">
   <div class="container">
     <form class="audit-form" action="/results" method="get" novalidate>
-      <fieldset>
+      <fieldset class="audit-form-feildset">
         <label for="url">URL to Test</label>
         <%= url_field_tag :url, @url, placeholder: 'http://www.example.com',
           required: true %>
@@ -9,6 +9,12 @@
         <button type="submit">Run Audit</button>
       </fieldset>
     </form>
+    <div>
+      <% if signed_out? %>
+        <%= link_to "Sign up for a free trial of AccessLint Pro", sign_up_path %>
+      <% end %>
+    </div>
+
   </div>
 </section>
 

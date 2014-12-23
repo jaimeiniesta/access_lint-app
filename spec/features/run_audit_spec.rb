@@ -5,8 +5,10 @@ describe "Auditing a page" do
     it "shows results in a disclosable widget", :js do
       visit root_path
 
-      fill_in "URL to Test", with: "google.com"
-      click_on "Run"
+      within(".audit-form-feildset") do
+        fill_in "URL to Test", with: "google.com"
+        click_on "Run"
+      end
 
       expect(page).to have_content "Failing"
       expect(page).not_to have_css "pre"
