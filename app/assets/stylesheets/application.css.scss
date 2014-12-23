@@ -13,7 +13,10 @@
 @import "results";
 
 .container {
-  @include outer-container;
-  @include padding(null ($base-spacing));
+  @include clearfix;
   position: relative;
+  width: 90%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
 }

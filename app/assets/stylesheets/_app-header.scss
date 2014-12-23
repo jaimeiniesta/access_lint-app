@@ -34,24 +34,32 @@
 .app-header-main {
 
   .container {
-    padding-top: $base-spacing;
-    padding-bottom: $base-spacing;
+    padding-top: $base-spacing * 1.5;
+    padding-bottom: $base-spacing * 1.5;
   }
 }
 
 .app-title {
-  float: right;
   margin: 0;
-  max-width: 40%;
+
+  @media screen and (min-width: $large-screen) {
+    float: right;
+    width: 40%;
+  }
 }
 
 .app-tagline {
-  float: left;
-  max-width: 60%;
+  margin: 1em 0 0 0;
+
+  @media screen and (min-width: $large-screen) {
+    margin-top: 0;
+    float: left;
+    width: 60%;
+  }
 
   ol {
     list-style-type: decimal;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
     margin-left: 1.5em;
   }
 
