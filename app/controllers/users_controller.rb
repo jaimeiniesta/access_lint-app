@@ -5,7 +5,7 @@ class UsersController < Clearance::UsersController
 
   def set_sign_up_success
     if signed_in?
-      flash[:success] = t(:sign_up_success)
+      flash[:success] = t(:success, scope: "flash.sign_up")
     end
   end
 end

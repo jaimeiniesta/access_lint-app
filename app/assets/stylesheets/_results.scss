@@ -17,6 +17,10 @@
 
 .result-item {
   margin-bottom: $base-spacing / 2;
-  font-size: modular-scale(16px, 0, 1.333);
+  font-size: modular-scale(16px, 1, 1.333);
   margin-top: $base-spacing;
+}
+
+[role="tabpanel"] pre {
+  background-color: white;
 }

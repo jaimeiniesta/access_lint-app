@@ -8,6 +8,6 @@ feature "User signs up" do
     fill_in "Password", with: "password"
     click_button "Sign up"
 
-    expect(page).to have_content I18n.t(:sign_up_success)
+    expect(page).to have_content I18n.t(:success, scope: "flash.sign_up")
   end
 end

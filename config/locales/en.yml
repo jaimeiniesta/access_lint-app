@@ -1,5 +1,9 @@
 en:
-  sign_up_success: "You have successfully signed up for a trial of AccessLint Pro. Check back soon for more features!"
+  links:
+    example: W3C's demonstration of an inaccessible site
+  flash:
+    sign_up:
+      success: You have successfully signed up for a trial of AccessLint Pro. Check back soon for more features!
   rules:
     AX_ARIA_01:
       title: Elements with ARIA roles must use a valid, non-abstract ARIA role
