@@ -1,4 +1,48 @@
 .app-footer {
-  @include padding(($base-spacing * 2) null ($base-spacing * 6));
-  background-color: $wake;
+    background-color: $tide;
+
+  .app-footer-inner {
+    @include padding(($base-spacing * 2.5) null ($base-spacing * 2.5));
+    background-color: $wake;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+  }
+
+  .container {
+    max-width: 16em;
+  }
+}
+
+.app-footer-title,
+.app-footer-copyright {
+  margin: 0;
+  background-color: $base-font-color;
+  color: $sand;
+  padding: strip-units($base-spacing) * 1rem;
+}
+
+.app-footer-title {
+  font-size: $base-font-size;
+
+  .app-logo-svg {
+    max-width: 100%;
+  }
+
+  path,
+  circle{
+    fill: $sand;
+  }
+}
+
+.app-footer-copyright {
+  padding-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.footer-navigation-list-item {
+  display: inline;
+
+  &:not(:last-child){
+    padding-right: 1em;
+  }
 }
