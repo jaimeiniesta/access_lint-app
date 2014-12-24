@@ -3,6 +3,12 @@ $prefix-for-mozilla:   false;
 $prefix-for-microsoft: false;
 $prefix-for-opera:     false;
 
+
+// Functions
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
 // Typography
 $base-font-family: Helvetica, Arial, sans-serif;
 $header-font-family: $base-font-family;

@@ -31,7 +31,11 @@
     </div>
     <div class="app-header-main">
       <div class="container">
-        <h1 class="app-title"><%= render 'shared/logo_accesslint.svg' %></h1>
+        <h1 class="app-title">
+          <%= link_to root_path, class: "app-title-link" do %>
+            <%= render 'shared/logo_accesslint.svg' %>
+          <% end %>
+        </h1>
         <h2 class="app-tagline">
           <ol>
             <li>Test your site’s accessibility</li>

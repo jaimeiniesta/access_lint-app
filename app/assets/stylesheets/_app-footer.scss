@@ -1,23 +1,23 @@
 .app-footer {
-    background-color: $tide;
-
-  .app-footer-inner {
-    @include padding(($base-spacing * 2.5) null ($base-spacing * 2.5));
-    background-color: $wake;
-    border-bottom-left-radius: 1.5em;
-    border-bottom-right-radius: 1.5em;
-  }
+  background-color: $tide;
 
   .container {
     max-width: 16em;
   }
 }
 
+.app-footer-inner {
+  @include padding(($base-spacing * 2.5) null ($base-spacing * 2.5));
+  background-color: $wake;
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+}
+
 .app-footer-title,
 .app-footer-copyright {
-  margin: 0;
   background-color: $base-font-color;
   color: $sand;
+  margin: 0;
   padding: strip-units($base-spacing) * 1rem;
 }
 
@@ -26,17 +26,17 @@
 
   .app-logo-svg {
     max-width: 100%;
-  }
 
-  path,
-  circle{
-    fill: $sand;
+    path,
+    circle{
+      fill: $sand;
+    }
   }
 }
 
 .app-footer-copyright {
-  padding-top: 0;
   margin-bottom: 0.5em;
+  padding-top: 0;
 }
 
 .footer-navigation-list-item {

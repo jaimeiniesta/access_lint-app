@@ -46,6 +46,29 @@
     float: right;
     width: 40%;
   }
+
+  .app-logo-svg {
+    path,
+    text,
+    circle
+     {
+      fill: $base-font-color;
+    }
+  }
+
+  .app-title-link:hover,
+  .app-title-link:active,
+  .app-title-link:focus {
+
+    .app-logo-svg {
+      path,
+      text,
+      circle
+       {
+        fill: $fire;
+      }
+    }
+  }
 }
 
 .app-tagline {
@@ -68,23 +91,4 @@
   }
 }
 
-.app-logo-svg {
-  path,
-  text,
-  circle
-   {
-    fill: $base-font-color;
-  }
-
-  a:hover,
-  a:active,
-  a:focus {
-    path,
-    text,
-    circle
-     {
-      fill: $fire;
-    }
-  }
-}
 

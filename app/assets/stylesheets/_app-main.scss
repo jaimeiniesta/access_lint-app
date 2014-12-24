@@ -1,18 +1,23 @@
 .app-main {
   background-color: $sand;
-  padding-top: $base-spacing;
-  padding-bottom: $base-spacing;
   border-bottom-left-radius: 1.5em;
   border-bottom-right-radius: 1.5em;
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+
+  @media screen and (min-width: $large-screen) {
+    padding-top: $base-spacing * 2;
+    padding-bottom: $base-spacing * 2;
+  }
 }
 
 .main-description {
-  position: relative;
   background-color: $sunset;
   color: $base-background-color;
   margin-left: $base-spacing;
   margin-right: $base-spacing;
   overflow: hidden;
+  position: relative;
 
   .container {
     height: 60vh;
@@ -36,8 +41,8 @@
 
     &:hover,
     &:focus {
-      border-color: $base-font-color;
       background-color: $base-font-color;
+      border-color: $base-font-color;
     }
   }
 }
@@ -57,15 +62,16 @@
 .description-detail-rule {
   @include position(absolute, null 0 null 0);
   border-color: $base-background-color;
-  border-width: 5px;
+  border-width: 4px;
   margin: 0;
 
   &:nth-of-type(1) {
-    bottom: 1em;
+    bottom: 0.55em;
   }
 
   &:nth-of-type(2) {
-    bottom: 0.25em;
+    border-width: 3px;
+    bottom: 0.2em;
   }
 }
 
