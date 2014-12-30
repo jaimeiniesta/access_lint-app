@@ -9,9 +9,9 @@ class URL
 
   def error
     if url.empty?
-      'URL cannot be blank'
+      I18n.t("url.errors.blank")
     elsif !valid?
-      'This URL is invalid'
+      I18n.t("url.errors.invalid")
     end
   end
 

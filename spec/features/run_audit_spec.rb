@@ -17,4 +17,17 @@ describe "Auditing a page" do
       expect(page).to have_css "pre"
     end
   end
+
+  context "when the audit fails" do
+    it "displays an error message" do
+      visit root_path
+
+      within(".audit-form-feildset") do
+        fill_in "URL to Test", with: "invalid_url"
+        click_on "Run"
+      end
+
+      expect(page).to have_content I18n.t("url.errors.invalid")
+    end
+  end
 end

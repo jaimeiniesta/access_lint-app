@@ -35,3 +35,7 @@ en:
       title: Text elements should have a reasonable contrast ratio
     AX_VIDEO_01:
       title: Video elements should use <track> elements to provide captions
+  url:
+    errors:
+      blank: URL cannot be blank
+      invalid: This URL is invalid

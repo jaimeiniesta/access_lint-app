@@ -21,6 +21,16 @@ describe ResultsController do
         get :index, url: "google"
 
         expect(request.flash.now[:error]).not_to be_blank
+        expect(assigns[:report]).to be_a EmptyReport
+      end
+    end
+
+    context "with an empty url" do
+      it "rescues with a flash notice" do
+        get :index, url: ""
+
+        expect(request.flash.now[:error]).not_to be_blank
+        expect(assigns[:report]).to be_a EmptyReport
       end
     end
   end
@@ -30,6 +40,7 @@ describe ResultsController do
       get :index
 
       expect(request.flash.now[:error]).not_to be_blank
+      expect(assigns[:report]).to be_a EmptyReport
     end
   end
 end
