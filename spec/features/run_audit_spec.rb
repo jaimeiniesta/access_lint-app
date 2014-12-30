@@ -22,7 +22,7 @@ describe "Auditing a page" do
     it "displays an error message" do
       visit root_path
 
-      within(".audit-form-feildset") do
+      within("fieldset") do
         fill_in "URL to Test", with: "invalid_url"
         click_on "Run"
       end
