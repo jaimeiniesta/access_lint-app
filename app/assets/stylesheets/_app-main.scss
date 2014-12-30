@@ -20,12 +20,12 @@
   position: relative;
 
   .container {
-    height: 60vh;
-    min-height: 25em;
+    height: 20em;
   }
 }
 
 .description-content {
+  padding: 10px;
 
   @media screen and (min-width: $large-screen) {
     @include position(absolute, 50% 0 null 60%);
@@ -101,14 +101,11 @@
 }
 
 .featuredby-list-item {
+  display: inline-block;
+  margin-right: 40px;
   float: left;
-  width: 50%;
 }
 
 .featuredby-list-item-logo {
   min-height: 10em;
-
-  path:not(:hover) {
-    fill: $base-font-color;
-  }
 }

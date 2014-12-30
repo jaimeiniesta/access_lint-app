@@ -5,7 +5,7 @@ describe "Auditing a page" do
     it "shows results in a disclosable widget", :js do
       visit root_path
 
-      within(".audit-form-feildset") do
+      within("fieldset") do
         fill_in "URL to Test", with: "google.com"
         click_on "Run"
       end

@@ -1,16 +1,17 @@
 <section class="main-description">
   <div class="container">
-    <%= render "shared/art_sun.svg" %>
     <div class="description-content">
       <p>
         AccessLint alerts you of common accessibility issues on a page. While no automated testing tool can give a complete picture of accessibility, AccessLint can catch some of the “low hanging fruit” of accessibility errors. That includes checking for alternative text on images, color contrast, and valid usage of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes.
       </p>
-      <%= link_to "Run Audit","#url", class: "button" %>
     </div>
+    <%= render "shared/art_sun.svg" %>
   </div>
   <hr class="description-detail-rule">
   <hr class="description-detail-rule">
 </section>
+
+<%= render "shared/audit_form" %>
 
 <section class="main-featuredby">
   <div class="container">
@@ -35,4 +36,3 @@
   </div>
 </section>
 
-<%= render "shared/audit_form" %>
