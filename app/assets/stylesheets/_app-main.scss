@@ -92,6 +92,7 @@
 
   &:after {
     margin-top: 0.5em;
+    margin-right: 2.5em;
   }
 }
 
@@ -101,9 +102,9 @@
 }
 
 .featuredby-list-item {
-  display: inline-block;
-  margin-right: 40px;
+  padding-right: 2.5em;
   float: left;
+  width: 50%;
 }
 
 .featuredby-list-item-logo {

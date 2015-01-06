@@ -2,4 +2,8 @@
   @include margin(null (-#{$base-spacing / 1.5}));
   background-color: rgba($base-font-color,0.05);
   padding: $base-spacing / 1.5;
+
+  fieldset {
+    padding: 0;
+  }
 }
