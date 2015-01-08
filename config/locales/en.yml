@@ -39,3 +39,5 @@ en:
     errors:
       blank: URL cannot be blank
       invalid: This URL is invalid
+  runner:
+    error: Could not load that URL

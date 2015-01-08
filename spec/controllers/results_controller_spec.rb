@@ -14,6 +14,17 @@ describe ResultsController do
         expect(response).to be_success
         expect(request.flash.now[:error]).to be_blank
       end
+
+      context "with a runner error" do
+        it "rescues with a flash notice" do
+          allow(Runner).to receive(:new).and_raise(Runner::RunnerError)
+
+          get :index, url: "http://google.com"
+
+          expect(request.flash.now[:error]).not_to be_blank
+          expect(assigns[:report]).to be_a EmptyReport
+        end
+      end
     end
 
     context "with an invalid url" do

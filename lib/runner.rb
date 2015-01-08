@@ -1,4 +1,6 @@
 class Runner
+  class RunnerError < StandardError; end
+
   RUNNER_PATH = File.expand_path("../../vendor/axs/auditor.js", __FILE__)
 
   def initialize(url)
@@ -6,7 +8,17 @@ class Runner
   end
 
   def execute
-    raw_results
+    JSON.parse(raw_results, max_nesting: 200)
+  rescue JSON::ParserError => e
+    Honeybadger.notify(
+      error_class: "JSON::ParserError",
+      error_message: "JSON::ParserError: #{e.message}",
+      parameters: {
+        url: @url,
+        body: raw_results
+      }
+    )
+    raise RunnerError
   end
 
   private

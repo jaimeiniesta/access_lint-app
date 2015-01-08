@@ -20,6 +20,6 @@ class ReportLoader
   end
 
   def results_hash
-    JSON.parse(runner.execute, max_nesting: 200)
+    runner.execute
   end
 end
