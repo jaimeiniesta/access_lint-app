@@ -1,7 +1,8 @@
 .flash {
   border: 2px solid $rind;
+  background-color: $rind;
   border-radius: $base-border-radius;
-  color: $rind;
+  color: $base-font-color;
   margin-bottom: 2em;
   padding: 1em;
 }

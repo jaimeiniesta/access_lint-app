@@ -17,6 +17,7 @@ select {
 
 label {
   font-weight: bold;
+  line-height: 1;
   margin-bottom: $base-spacing / 4;
 
   &.required:after {
@@ -37,13 +38,13 @@ textarea,
 select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
-  background-color: white;
+  background-color: $sand;
   border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  margin-bottom: $base-spacing / 2;
+  margin-bottom: $base-spacing;
   padding: ($base-spacing / 3) ($base-spacing / 3);
   width: 100%;
 
@@ -52,6 +53,7 @@ select[multiple=multiple] {
   }
 
   &:focus {
+    background-color: white;
     border-color: $form-border-color-focus;
     box-shadow: $form-box-shadow-focus;
     outline: none;

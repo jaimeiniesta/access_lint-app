@@ -1,0 +1,35 @@
+.sessions-formcard {
+  background-color: $base-font-color;
+  border-radius: $base-border-radius;
+  color: $base-background-color;
+  margin: 0 auto;
+  max-width: 25em;
+  padding: $base-spacing;
+
+  a:not(:hover),
+  label {
+    color: $base-background-color;
+  }
+}
+
+.sessions-formcard-emailfield-submitfield {
+  margin-bottom: 1em;
+}
+
+.submitfield-submit {
+  border-color: $base-background-color;
+  color: $base-background-color;
+
+  &:hover,
+  &:focus {
+    background-color: $base-background-color;
+    color: $base-font-color;
+  }
+}
+
+.sessions-formcard-emailfield-links {
+
+  a {
+    margin-right: 1em;
+  }
+}
