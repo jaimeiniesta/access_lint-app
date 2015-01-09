@@ -1,15 +1,19 @@
-<div id="clearance" class="sign-up">
-  <h2><%= t('.title') %></h2>
+<section class="main-sessions sessions-signin">
+  <div class="container">
+    <div class="sessions-formcard">
+      <h2><%= t('.title') %></h2>
 
-  <%= form_for @user do |form| %>
-    <%= render partial: '/users/form', object: form %>
+      <%= form_for @user do |form| %>
+        <%= render partial: '/users/form', object: form %>
 
-    <div class="submit-field">
-      <%= form.submit %>
+        <div class="sessions-formcard-emailfield-submitfield">
+          <%= form.submit class: "submitfield-submit" %>
+        </div>
+
+        <div class="sessions-formcard-emailfield-links">
+          <%= link_to t('.sign_in'), sign_in_path %>
+        </div>
+      <% end %>
     </div>
-
-    <div class="other-links">
-      <%= link_to t('.sign_in'), sign_in_path %>
-    </div>
-  <% end %>
-</div>
+  </div>
+</section>
