@@ -1,6 +1,6 @@
 class URL
   def initialize(url)
-    @url = url || ''
+    @url = url
   end
 
   def valid?
