@@ -5,6 +5,8 @@ describe "Auditing a page" do
     it "shows results in a disclosable widget", :js do
       visit root_path
 
+      expect(page.driver.error_messages).to be_empty
+
       within("fieldset") do
         fill_in "URL to Test", with: "google.com"
         click_on "Run"
