@@ -26,6 +26,6 @@ class Runner
   attr_reader :url
 
   def raw_results
-    `phantomjs #{RUNNER_PATH} #{@url}`
+    PhantomJs.new(@url).run
   end
 end

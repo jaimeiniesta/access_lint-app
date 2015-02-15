@@ -6,7 +6,9 @@ describe Runner do
       it "returns JSON" do
         url = double(:url)
         runner = Runner.new(url)
-        allow(runner).to receive(:`).and_return([].to_json)
+        phantomjs = double(:phantomjs, run: [].to_json)
+
+        allow(PhantomJs).to receive(:new).with(url).and_return(phantomjs)
 
         result = runner.execute
         expect(result).to eq []
@@ -18,7 +20,9 @@ describe Runner do
     it "raises an error" do
       url = double(:url)
       runner = Runner.new(url)
-      allow(runner).to receive(:`).and_return("Could not parse url")
+      phantomjs = double(:phantomjs, run: "error")
+
+      allow(PhantomJs).to receive(:new).with(url).and_return(phantomjs)
 
       expect(Honeybadger).to receive(:notify)
       expect { runner.execute }.to raise_error(Runner::RunnerError)
