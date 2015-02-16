@@ -20,6 +20,6 @@ class ReportLoader
   end
 
   def results_hash
-    runner.execute
+    runner.results
   end
 end

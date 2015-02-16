@@ -4,9 +4,7 @@ var page = require('webpage').create(),
 
 page.settings.resourceTimeout = 10000;
 page.onResourceTimeout = function(e) {
-  console.log(e.errorCode);   // it'll probably be 408
-  console.log(e.errorString); // it'll probably be 'Network timeout on resource'
-  console.log(e.url);         // the url whose request timed out
+  console.log(JSON.stringify([e]));
   phantom.exit(1);
 };
 

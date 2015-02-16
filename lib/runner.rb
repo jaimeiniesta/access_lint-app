@@ -1,31 +1,51 @@
 class Runner
   class RunnerError < StandardError; end
 
-  RUNNER_PATH = File.expand_path("../../vendor/axs/auditor.js", __FILE__)
+  attr_reader :results
 
   def initialize(url)
     @url = url
-  end
+    execute_audit
+    load_results
 
-  def execute
-    JSON.parse(raw_results, max_nesting: 200)
-  rescue JSON::ParserError => e
-    Honeybadger.notify(
-      error_class: "JSON::ParserError",
-      error_message: "JSON::ParserError: #{e.message}",
-      parameters: {
-        url: @url,
-        body: raw_results
-      }
-    )
-    raise RunnerError
+    if has_error?
+      report_error
+      raise RunnerError
+    end
   end
 
   private
 
-  attr_reader :url
+  attr_reader :url, :response
 
-  def raw_results
-    PhantomJs.new(@url).run
+  def execute_audit
+    @response ||= PhantomJs.new(@url).run
+  end
+
+  def load_results
+    @results = JSON.parse(@response, max_nesting: 200)
+  end
+
+  def has_error?
+    @results.any? { |r| r.has_key?("errorCode") }
+  end
+
+  def error_code
+    @results.first["errorCode"]
+  end
+
+  def error_status
+    @results.first["errorStatus"]
+  end
+
+  def report_error
+    Honeybadger.notify(
+      error_class: "RunnerError: #{error_code}",
+      error_message: error_status,
+      parameters: {
+        url: @url,
+        body: @response
+      }
+    )
   end
 end
