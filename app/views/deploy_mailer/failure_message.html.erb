@@ -1,0 +1,7 @@
+<h1>Accessibility Issues in recent deploy<h1>
+
+<ul>
+  <%- @report.failing.each do |issue| %>
+    <li><%= issue.title %></li>
+  <% end %>
+</ul>

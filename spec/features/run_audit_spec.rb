@@ -5,7 +5,10 @@ describe "Auditing a page" do
     it "shows results in a disclosable widget", :js do
       visit root_path
 
-      fill_in "URL to Test", with: "http://www.w3.org/WAI/demos/bad/before/home.html"
+      fill_in(
+        "URL to Test",
+        with: "http://www.w3.org/WAI/demos/bad/before/home.html"
+      )
       click_on "Run"
 
       expect(page).to have_content "Failing"

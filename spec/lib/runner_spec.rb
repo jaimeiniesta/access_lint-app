@@ -17,7 +17,7 @@ describe Runner do
   context "with a phantomjs error message" do
     it "raises an error" do
       url = double(:url)
-      phantomjs = double(:phantomjs, run: [{ errorCode: "408"}].to_json)
+      phantomjs = double(:phantomjs, run: [{ errorCode: "408" }].to_json)
       allow(PhantomJs).to receive(:new).with(url).and_return(phantomjs)
 
       expect(Honeybadger).to receive(:notify)
