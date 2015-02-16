@@ -5,12 +5,8 @@ describe "Auditing a page" do
     it "shows results in a disclosable widget", :js do
       visit root_path
 
-      expect(page.driver.error_messages).to be_empty
-
-      within("fieldset") do
-        fill_in "URL to Test", with: "google.com"
-        click_on "Run"
-      end
+      fill_in "URL to Test", with: "http://www.w3.org/WAI/demos/bad/before/home.html"
+      click_on "Run"
 
       expect(page).to have_content "Failing"
       expect(page).not_to have_css "pre"
